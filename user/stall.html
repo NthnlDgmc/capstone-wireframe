@@ -1,0 +1,4774 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NWSSU Food Court - Wireframe</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .phone-frame {
+        width: 360px;
+        height: 760px;
+        background: #000;
+        border: 12px solid #222;
+        border-radius: 40px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      .phone-frame::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 28px;
+        background: #000;
+        border-radius: 0 0 20px 20px;
+        z-index: 10;
+      }
+      .phone-content {
+        flex: 1;
+        background: #fff;
+        padding: 28px 0 0 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .mobile-body::-webkit-scrollbar {
+        width: 4px;
+      }
+      .mobile-body::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .mobile-body::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 2px;
+      }
+      .tab-active {
+        color: #4f46e5;
+        border-bottom: 2px solid #4f46e5;
+        font-weight: 600;
+      }
+      .tab-inactive {
+        color: #9ca3af;
+        border-bottom: 2px solid transparent;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100 overflow-auto flex items-start justify-center p-5 gap-[30px] flex-wrap"
+  >
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 NWSSU FOOD COURT - BROWSE / LANDING PAGE
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white px-4 py-3 flex items-center justify-between shrink-0"
+          >
+            <div class="text-lg font-bold text-gray-800">NWSSU Food Court</div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto pb-4 mobile-body">
+            <div class="px-4 pt-4 pb-2">
+              <div
+                class="bg-gradient-to-r from-indigo-50 to-indigo-100 border border-indigo-200 rounded-xl p-3 text-center"
+              >
+                <i
+                  class="bx bx-lock-alt text-indigo-400 text-sm mb-1 block"
+                ></i>
+                <p class="text-[11px] text-indigo-800 font-medium">
+                  Welcome to NWSSU Food Court!
+                </p>
+                <p class="text-[10px] text-indigo-600 mt-0.5">
+                  Sign in to order food and track your deliveries
+                </p>
+                <button
+                  class="mt-2 bg-indigo-500 text-white px-4 py-1.5 rounded-lg text-[10px] font-semibold"
+                >
+                  Sign In / Create Account
+                </button>
+              </div>
+            </div>
+
+            <div class="px-4 pt-2 pb-2">
+              <div class="flex gap-2">
+                <div class="flex-1 relative">
+                  <i
+                    class="bx bx-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                  ></i>
+                  <input
+                    type="text"
+                    placeholder="Search for foods..."
+                    class="w-full py-2.5 pl-9 pr-3 bg-gray-100 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-indigo-400"
+                  />
+                </div>
+                <button
+                  class="bg-indigo-500 text-white px-4 rounded-xl flex items-center gap-1 text-sm font-medium"
+                >
+                  <i class="bx bx-filter-alt text-base"></i>
+                  <span>Stall</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="px-4 pt-2 pb-2">
+              <img
+                src="../images/banner.png"
+                alt="Food Court Banner"
+                class="w-full rounded-xl object-cover"
+              />
+            </div>
+
+            <div class="px-4 py-3 flex gap-2 border-b border-gray-100">
+              <div
+                class="px-4 py-1.5 bg-indigo-600 rounded-full cursor-pointer"
+              >
+                <span class="text-xs font-medium text-white">All</span>
+              </div>
+              <div
+                class="px-4 py-1.5 bg-indigo-100 rounded-full cursor-pointer"
+              >
+                <span class="text-xs font-medium text-indigo-700">Meals</span>
+              </div>
+              <div
+                class="px-4 py-1.5 bg-indigo-100 rounded-full cursor-pointer"
+              >
+                <span class="text-xs font-medium text-indigo-700">Drinks</span>
+              </div>
+              <div
+                class="px-4 py-1.5 bg-indigo-100 rounded-full cursor-pointer"
+              >
+                <span class="text-xs font-medium text-indigo-700">Snacks</span>
+              </div>
+            </div>
+
+            <div class="px-4 pt-4 pb-4">
+              <div class="grid grid-cols-2 gap-3">
+                <div
+                  class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden"
+                >
+                  <div
+                    class="w-full h-20 bg-gray-200 flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="../images/spaghetti.jpg"
+                      alt="Spaghetti"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-2">
+                    <h3 class="text-xs font-semibold text-gray-800 mb-0.5">
+                      Spaghetti
+                    </h3>
+                    <p class="text-[10px] text-gray-400 mb-1.5">Stall 1</p>
+                    <div class="flex justify-between items-center">
+                      <span class="text-sm font-bold text-indigo-500">₱25</span>
+                      <button
+                        class="bg-indigo-500 text-white w-6 h-6 rounded text-base flex items-center justify-center"
+                      >
+                        <i class="bx bx-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden"
+                >
+                  <div
+                    class="w-full h-20 bg-gray-200 flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="../images/fried_chicken.jpg"
+                      alt="Fried Chicken"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-2">
+                    <h3 class="text-xs font-semibold text-gray-800 mb-0.5">
+                      Fried Chicken
+                    </h3>
+                    <p class="text-[10px] text-gray-400 mb-1.5">Stall 2</p>
+                    <div class="flex justify-between items-center">
+                      <span class="text-sm font-bold text-indigo-500">₱50</span>
+                      <button
+                        class="bg-indigo-500 text-white w-6 h-6 rounded text-base flex items-center justify-center"
+                      >
+                        <i class="bx bx-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden"
+                >
+                  <div
+                    class="w-full h-20 bg-gray-200 flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="../images/lumpia.jpg"
+                      alt="Lumpia"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-2">
+                    <h3 class="text-xs font-semibold text-gray-800 mb-0.5">
+                      Lumpia
+                    </h3>
+                    <p class="text-[10px] text-gray-400 mb-1.5">Stall 4</p>
+                    <div class="flex justify-between items-center">
+                      <span class="text-sm font-bold text-indigo-500">₱5</span>
+                      <button
+                        class="bg-indigo-500 text-white w-6 h-6 rounded text-base flex items-center justify-center"
+                      >
+                        <i class="bx bx-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden"
+                >
+                  <div
+                    class="w-full h-20 bg-gray-200 flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="../images/iced_tea.jpg"
+                      alt="Iced Tea"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-2">
+                    <h3 class="text-xs font-semibold text-gray-800 mb-0.5">
+                      Iced Tea
+                    </h3>
+                    <p class="text-[10px] text-gray-400 mb-1.5">Stall 3</p>
+                    <div class="flex justify-between items-center">
+                      <span class="text-sm font-bold text-indigo-500">₱30</span>
+                      <button
+                        class="bg-indigo-500 text-white w-6 h-6 rounded text-base flex items-center justify-center"
+                      >
+                        <i class="bx bx-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 LOGIN
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div class="flex flex-col h-full">
+              <div class="text-center mt-4 mb-6">
+                <img
+                  src="../images/logo.png"
+                  alt="NWSSU Food Court Logo"
+                  class="w-24 h-24 mx-auto mb-3 object-contain"
+                  onerror="
+                    this.src = 'https://placehold.co/96x96/667eea/white?text=FC'
+                  "
+                />
+                <h1 class="text-xl font-bold text-gray-800">
+                  NWSSU Food Court
+                </h1>
+                <p class="text-xs text-gray-400 mt-1">Ordering System</p>
+              </div>
+              <div class="mb-4">
+                <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                  >ID NUMBER OR EMAIL</label
+                >
+                <div class="relative">
+                  <i
+                    class="bx bx-user absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                  ></i>
+                  <input
+                    type="text"
+                    placeholder="Enter your ID number or email"
+                    class="w-full py-2.5 pl-9 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                  />
+                </div>
+                <p class="text-[10px] text-gray-400 mt-1">
+                  Campus: ID Number | Outside: Email address
+                </p>
+              </div>
+              <div class="mb-4">
+                <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                  >PASSWORD</label
+                >
+                <div class="relative">
+                  <i
+                    class="bx bx-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                  ></i>
+                  <input
+                    type="password"
+                    placeholder="Enter your password"
+                    class="w-full py-2.5 pl-9 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                  />
+                </div>
+              </div>
+              <div class="flex justify-between items-center mb-6">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    class="w-3.5 h-3.5 rounded border-gray-300"
+                  />
+                  <span class="text-xs text-gray-600">Remember me</span>
+                </label>
+                <a href="#" class="text-xs text-indigo-500 font-medium"
+                  >Forgot password?</a
+                >
+              </div>
+              <button
+                class="w-full bg-indigo-500 text-white py-3 rounded-lg text-sm font-semibold mb-4"
+              >
+                Sign In
+              </button>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="flex-1 h-px bg-gray-200"></div>
+                <span class="text-xs text-gray-400">or</span>
+                <div class="flex-1 h-px bg-gray-200"></div>
+              </div>
+              <div class="text-center">
+                <p class="text-xs text-gray-600 mb-2">Outside Customer?</p>
+                <button
+                  class="w-full bg-white border border-indigo-500 text-indigo-500 py-3 rounded-lg text-sm font-semibold"
+                >
+                  Create account here
+                </button>
+                <p class="text-[10px] text-gray-400 mt-2">
+                  For visitors, guests & outside customers
+                </p>
+              </div>
+              <div class="mt-6 text-center">
+                <div class="flex items-center justify-center gap-1">
+                  <i class="bx bx-lock-alt text-gray-400 text-xs"></i>
+                  <span class="text-[10px] text-gray-400"
+                    >Secure checkout for both campus & guest users</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 SIGN UP
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Create Account
+            </div>
+            <div class="w-6"></div>
+          </div>
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+              <p class="text-[11px] text-blue-800 leading-relaxed">
+                📌 IMPORTANT NOTE: This sign up is ONLY for customers OUTSIDE
+                NWSSU (visitors, off-campus customers, walk-in guests). NWSSU
+                students, faculty, and staff already have existing records —
+                please use the Campus Login with your school ID number.
+              </p>
+            </div>
+
+            <div class="mb-3">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >First Name <span class="text-red-500">*</span></label
+              >
+              <div class="relative">
+                <i
+                  class="bx bx-user absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                ></i>
+                <input
+                  type="text"
+                  placeholder="Juan"
+                  class="w-full py-2.5 pl-9 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Middle Name <span class="text-red-500">*</span></label
+              >
+              <div class="relative">
+                <i
+                  class="bx bx-user-voice absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                ></i>
+                <input
+                  type="text"
+                  placeholder="Santos"
+                  class="w-full py-2.5 pl-9 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Last Name <span class="text-red-500">*</span></label
+              >
+              <div class="relative">
+                <i
+                  class="bx bx-user-check absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                ></i>
+                <input
+                  type="text"
+                  placeholder="Dela Cruz"
+                  class="w-full py-2.5 pl-9 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Contact Number <span class="text-red-500">*</span></label
+              >
+              <div class="relative">
+                <i
+                  class="bx bx-phone absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                ></i>
+                <input
+                  type="tel"
+                  placeholder="09123456789"
+                  class="w-full py-2.5 pl-9 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Email Address <span class="text-red-500">*</span></label
+              >
+              <div class="relative">
+                <i
+                  class="bx bx-envelope absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                ></i>
+                <input
+                  type="email"
+                  placeholder="email@example.com"
+                  class="w-full py-2.5 pl-9 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Password <span class="text-red-500">*</span></label
+              >
+              <div class="relative">
+                <i
+                  class="bx bx-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                ></i>
+                <input
+                  type="password"
+                  placeholder="••••••••"
+                  class="w-full py-2.5 pl-9 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+              <p class="text-[10px] text-gray-400 mt-1">Minimum 8 characters</p>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Confirm Password <span class="text-red-500">*</span></label
+              >
+              <div class="relative">
+                <i
+                  class="bx bx-check-shield absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                ></i>
+                <input
+                  type="password"
+                  placeholder="••••••••"
+                  class="w-full py-2.5 pl-9 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+            </div>
+
+            <button
+              class="w-full bg-indigo-500 text-white py-3 rounded-lg text-sm font-semibold mb-4"
+            >
+              Create Account →
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flex-1 h-px bg-gray-200"></div>
+              <span class="text-xs text-gray-400">or</span>
+              <div class="flex-1 h-px bg-gray-200"></div>
+            </div>
+
+            <div class="text-center">
+              <a
+                href="#"
+                class="text-xs text-indigo-500 font-medium inline-block"
+                >Already have an account? Sign In</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - DASHBOARD
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white px-4 py-3 flex items-center justify-between shrink-0 border-b border-gray-200"
+          >
+            <div class="text-lg font-bold text-gray-800">Dashboard</div>
+            <div class="relative cursor-pointer">
+              <i class="bx bx-bell text-2xl text-gray-700"></i>
+              <span
+                class="absolute -top-1 -right-2 bg-red-500 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center"
+                >3</span
+              >
+            </div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto pb-4 mobile-body">
+            <div class="px-4 pt-3">
+              <div class="grid grid-cols-2 gap-3 mb-4">
+                <div
+                  class="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-3 text-white"
+                >
+                  <div class="flex items-center justify-between">
+                    <p class="text-[10px] opacity-80">Total Sales</p>
+                    <i class="bx bx-trending-up text-lg opacity-80"></i>
+                  </div>
+                  <p class="text-xl font-bold mt-1">₱12,450</p>
+                  <p class="text-[8px] opacity-70 mt-1">
+                    ↑ +15% from last week
+                  </p>
+                </div>
+
+                <div
+                  class="bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-xl p-3 text-white"
+                >
+                  <div class="flex items-center justify-between">
+                    <p class="text-[10px] opacity-80">Total Orders</p>
+                    <i class="bx bx-receipt text-lg opacity-80"></i>
+                  </div>
+                  <p class="text-xl font-bold mt-1">128</p>
+                  <p class="text-[8px] opacity-70 mt-1">+23 this week</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 mb-4">
+                <div
+                  class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-3 text-white"
+                >
+                  <div class="flex items-center justify-between">
+                    <p class="text-[10px] opacity-80">Active Orders</p>
+                    <i class="bx bx-time text-lg opacity-80"></i>
+                  </div>
+                  <p class="text-xl font-bold mt-1">12</p>
+                  <p class="text-[8px] opacity-70 mt-1">
+                    Preparing / Delivering
+                  </p>
+                </div>
+
+                <div
+                  class="bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl p-3 text-white"
+                >
+                  <div class="flex items-center justify-between">
+                    <p class="text-[10px] opacity-80">Completed</p>
+                    <i class="bx bx-check-circle text-lg opacity-80"></i>
+                  </div>
+                  <p class="text-xl font-bold mt-1">116</p>
+                  <p class="text-[8px] opacity-70 mt-1">This week</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-bolt text-indigo-500"></i> Quick Actions
+              </p>
+              <div class="grid grid-cols-2 gap-3">
+                <button
+                  class="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-center"
+                >
+                  <i class="bx bx-plus-circle text-indigo-500 text-xl"></i>
+                  <p class="text-[10px] font-semibold text-indigo-600 mt-1">
+                    Add New Item
+                  </p>
+                </button>
+                <button
+                  class="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-center"
+                >
+                  <i class="bx bx-category text-indigo-500 text-xl"></i>
+                  <p class="text-[10px] font-semibold text-indigo-600 mt-1">
+                    Manage Menu
+                  </p>
+                </button>
+                <button
+                  class="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-center"
+                >
+                  <i class="bx bx-dollar-circle text-indigo-500 text-xl"></i>
+                  <p class="text-[10px] font-semibold text-indigo-600 mt-1">
+                    Delivery Fee
+                  </p>
+                </button>
+                <button
+                  class="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-center"
+                >
+                  <i class="bx bx-trending-up text-indigo-500 text-xl"></i>
+                  <p class="text-[10px] font-semibold text-indigo-600 mt-1">
+                    Analytics
+                  </p>
+                </button>
+                <button
+                  class="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-center"
+                >
+                  <i class="bx bx-export text-indigo-500 text-xl"></i>
+                  <p class="text-[10px] font-semibold text-indigo-600 mt-1">
+                    Generate Report
+                  </p>
+                </button>
+              </div>
+            </div>
+
+            <div class="px-4 mb-4">
+              <div class="bg-white border border-gray-200 rounded-xl p-3">
+                <div class="flex items-center justify-between mb-3">
+                  <p class="text-xs font-bold text-gray-800">Weekly Revenue</p>
+                </div>
+                <div class="flex items-end justify-between gap-2 h-28">
+                  <div class="flex-1 flex flex-col items-center">
+                    <div
+                      class="w-full bg-indigo-100 rounded-t-lg"
+                      style="height: 40px"
+                    ></div>
+                    <p class="text-[9px] text-gray-500 mt-1">Mon</p>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center">
+                    <div
+                      class="w-full bg-indigo-300 rounded-t-lg"
+                      style="height: 60px"
+                    ></div>
+                    <p class="text-[9px] text-gray-500 mt-1">Tue</p>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center">
+                    <div
+                      class="w-full bg-indigo-400 rounded-t-lg"
+                      style="height: 75px"
+                    ></div>
+                    <p class="text-[9px] text-gray-500 mt-1">Wed</p>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center">
+                    <div
+                      class="w-full bg-indigo-500 rounded-t-lg"
+                      style="height: 90px"
+                    ></div>
+                    <p class="text-[9px] text-gray-500 mt-1">Thu</p>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center">
+                    <div
+                      class="w-full bg-indigo-600 rounded-t-lg"
+                      style="height: 70px"
+                    ></div>
+                    <p class="text-[9px] text-gray-500 mt-1">Fri</p>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center">
+                    <div
+                      class="w-full bg-indigo-400 rounded-t-lg"
+                      style="height: 55px"
+                    ></div>
+                    <p class="text-[9px] text-gray-500 mt-1">Sat</p>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center">
+                    <div
+                      class="w-full bg-indigo-200 rounded-t-lg"
+                      style="height: 35px"
+                    ></div>
+                    <p class="text-[9px] text-gray-500 mt-1">Sun</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-4 mb-4">
+              <div class="flex items-center justify-between mb-3">
+                <p class="text-xs font-bold text-gray-800">Recent Orders</p>
+                <a href="#" class="text-[10px] text-indigo-500 font-medium"
+                  >View All</a
+                >
+              </div>
+
+              <div
+                class="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-2"
+              >
+                <div class="flex justify-between items-start">
+                  <div>
+                    <p class="text-xs font-semibold text-gray-800">#NW-3941</p>
+                    <p class="text-[9px] text-gray-400">
+                      Jan 28, 2025 · 09:15 AM
+                    </p>
+                  </div>
+                  <span
+                    class="bg-amber-100 text-amber-700 text-[9px] font-semibold px-2 py-0.5 rounded-full"
+                    >Preparing</span
+                  >
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                  <div>
+                    <p class="text-[10px] text-gray-500">
+                      Spaghetti, Fried Chicken
+                    </p>
+                    <p class="text-[9px] text-gray-400">Qty: 3 items</p>
+                  </div>
+                  <p class="text-xs font-bold text-indigo-600">₱320</p>
+                </div>
+              </div>
+
+              <div
+                class="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-2"
+              >
+                <div class="flex justify-between items-start">
+                  <div>
+                    <p class="text-xs font-semibold text-gray-800">#NW-4012</p>
+                    <p class="text-[9px] text-gray-400">
+                      Jan 28, 2025 · 11:45 AM
+                    </p>
+                  </div>
+                  <span
+                    class="bg-yellow-100 text-yellow-700 text-[9px] font-semibold px-2 py-0.5 rounded-full"
+                    >Pending</span
+                  >
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                  <div>
+                    <p class="text-[10px] text-gray-500">Iced Tea</p>
+                    <p class="text-[9px] text-gray-400">Qty: 1 item</p>
+                  </div>
+                  <p class="text-xs font-bold text-indigo-600">₱60</p>
+                </div>
+              </div>
+
+              <div class="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <p class="text-xs font-semibold text-gray-800">#NW-3829</p>
+                    <p class="text-[9px] text-gray-400">
+                      Jan 27, 2025 · 12:34 PM
+                    </p>
+                  </div>
+                  <span
+                    class="bg-green-100 text-green-700 text-[9px] font-semibold px-2 py-0.5 rounded-full"
+                    >Delivered</span
+                  >
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                  <div>
+                    <p class="text-[10px] text-gray-500">
+                      Spaghetti Carbonara, Fried Chicken
+                    </p>
+                    <p class="text-[9px] text-gray-400">Qty: 3 items</p>
+                  </div>
+                  <p class="text-xs font-bold text-indigo-600">₱290</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-4 pb-4">
+              <div class="flex items-center justify-between mb-3">
+                <p class="text-xs font-bold text-gray-800">Top Selling Items</p>
+                <a href="#" class="text-[10px] text-indigo-500 font-medium"
+                  >View All</a
+                >
+              </div>
+
+              <div class="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                <div
+                  class="flex justify-between items-center mb-2 pb-2 border-b border-gray-200"
+                >
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-gray-200 rounded-lg overflow-hidden">
+                      <img
+                        src="../images/spaghetti.jpg"
+                        alt="Spaghetti"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-800">
+                        Spaghetti
+                      </p>
+                      <p class="text-[9px] text-gray-400">₱25 each</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-xs font-bold text-indigo-600">₱2,500</p>
+                    <p class="text-[9px] text-gray-400">100 sold</p>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-between items-center mb-2 pb-2 border-b border-gray-200"
+                >
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-gray-200 rounded-lg overflow-hidden">
+                      <img
+                        src="../images/fried_chicken.jpg"
+                        alt="Fried Chicken"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-800">
+                        Fried Chicken
+                      </p>
+                      <p class="text-[9px] text-gray-400">₱50 each</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-xs font-bold text-indigo-600">₱2,000</p>
+                    <p class="text-[9px] text-gray-400">40 sold</p>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-gray-200 rounded-lg overflow-hidden">
+                      <img
+                        src="../images/iced_tea.jpg"
+                        alt="Iced Tea"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-800">
+                        Iced Tea
+                      </p>
+                      <p class="text-[9px] text-gray-400">₱30 each</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-xs font-bold text-indigo-600">₱900</p>
+                    <p class="text-[9px] text-gray-400">30 sold</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white border-t border-gray-200 flex justify-around py-2 shrink-0"
+          >
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-indigo-600 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-home-alt"></i>
+              </div>
+              <div class="font-medium">Dashboard</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-food-menu"></i>
+              </div>
+              <div>Menu</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5"><i class="bx bx-cart"></i></div>
+              <div>Orders</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-message-dots"></i>
+              </div>
+              <div>Chats</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-user-circle"></i>
+              </div>
+              <div>Profile</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - DELIVERY SETTINGS
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Delivery Settings
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+              <p class="text-[10px] text-blue-700 flex items-start gap-1">
+                <i class="bx bx-info-circle text-xs mt-0.5"></i>
+                Set your stall's delivery fee. This will be added to every order
+                from your stall.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+              <p class="text-xs font-bold text-gray-800 mb-3">
+                Current Delivery Fee
+              </p>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl font-bold text-gray-800">₱</span>
+                <input
+                  type="number"
+                  value="10"
+                  class="flex-1 py-3 px-3 border border-gray-200 rounded-lg text-lg font-semibold focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+              <button
+                class="w-full bg-indigo-500 text-white py-3 rounded-lg text-sm font-semibold"
+              >
+                Update Delivery Fee
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - ANALYTICS
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Analytics
+            </div>
+            <div class="flex gap-2">
+              <div class="text-2xl text-gray-800 cursor-pointer">
+                <i class="bx bx-calendar"></i>
+              </div>
+              <div class="text-2xl text-gray-800 cursor-pointer">
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <!-- Date Range Selector -->
+            <div class="flex gap-2 mb-4">
+              <button
+                class="flex-1 bg-indigo-600 text-white py-2 rounded-lg text-[11px] font-semibold"
+              >
+                This Week
+              </button>
+              <button
+                class="flex-1 bg-gray-100 text-gray-600 py-2 rounded-lg text-[11px] font-semibold"
+              >
+                This Month
+              </button>
+              <button
+                class="flex-1 bg-gray-100 text-gray-600 py-2 rounded-lg text-[11px] font-semibold"
+              >
+                This Year
+              </button>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <div
+                class="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-3 text-white"
+              >
+                <p class="text-[9px] opacity-80">Total Revenue</p>
+                <p class="text-lg font-bold mt-1">₱12,450</p>
+                <p class="text-[7px] opacity-70 mt-1">↑ +15% vs last week</p>
+              </div>
+              <div
+                class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-3 text-white"
+              >
+                <p class="text-[9px] opacity-80">Total Orders</p>
+                <p class="text-lg font-bold mt-1">128</p>
+                <p class="text-[7px] opacity-70 mt-1">↑ +23 vs last week</p>
+              </div>
+              <div
+                class="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-3 text-white"
+              >
+                <p class="text-[9px] opacity-80">Average Order Value</p>
+                <p class="text-lg font-bold mt-1">₱97</p>
+                <p class="text-[7px] opacity-70 mt-1">↑ +5% vs last week</p>
+              </div>
+              <div
+                class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-3 text-white"
+              >
+                <p class="text-[9px] opacity-80">Completion Rate</p>
+                <p class="text-lg font-bold mt-1">98%</p>
+                <p class="text-[7px] opacity-70 mt-1">↑ +2% vs last week</p>
+              </div>
+            </div>
+
+            <!-- Revenue Chart -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 mb-4">
+              <div class="flex items-center justify-between mb-3">
+                <p class="text-xs font-bold text-gray-800">Daily Revenue</p>
+                <span class="text-[9px] text-gray-400">Last 7 days</span>
+              </div>
+              <div class="flex items-end justify-between gap-2 h-32">
+                <div class="flex-1 flex flex-col items-center">
+                  <div
+                    class="w-full bg-indigo-100 rounded-t-lg"
+                    style="height: 40px"
+                  ></div>
+                  <p class="text-[8px] text-gray-500 mt-1">Mon</p>
+                  <p class="text-[8px] font-semibold text-gray-600">₱450</p>
+                </div>
+                <div class="flex-1 flex flex-col items-center">
+                  <div
+                    class="w-full bg-indigo-300 rounded-t-lg"
+                    style="height: 60px"
+                  ></div>
+                  <p class="text-[8px] text-gray-500 mt-1">Tue</p>
+                  <p class="text-[8px] font-semibold text-gray-600">₱680</p>
+                </div>
+                <div class="flex-1 flex flex-col items-center">
+                  <div
+                    class="w-full bg-indigo-400 rounded-t-lg"
+                    style="height: 75px"
+                  ></div>
+                  <p class="text-[8px] text-gray-500 mt-1">Wed</p>
+                  <p class="text-[8px] font-semibold text-gray-600">₱750</p>
+                </div>
+                <div class="flex-1 flex flex-col items-center">
+                  <div
+                    class="w-full bg-indigo-500 rounded-t-lg"
+                    style="height: 90px"
+                  ></div>
+                  <p class="text-[8px] text-gray-500 mt-1">Thu</p>
+                  <p class="text-[8px] font-semibold text-gray-600">₱520</p>
+                </div>
+                <div class="flex-1 flex flex-col items-center">
+                  <div
+                    class="w-full bg-indigo-600 rounded-t-lg"
+                    style="height: 80px"
+                  ></div>
+                  <p class="text-[8px] text-gray-500 mt-1">Fri</p>
+                  <p class="text-[8px] font-semibold text-gray-600">₱880</p>
+                </div>
+                <div class="flex-1 flex flex-col items-center">
+                  <div
+                    class="w-full bg-indigo-300 rounded-t-lg"
+                    style="height: 55px"
+                  ></div>
+                  <p class="text-[8px] text-gray-500 mt-1">Sat</p>
+                  <p class="text-[8px] font-semibold text-gray-600">₱620</p>
+                </div>
+                <div class="flex-1 flex flex-col items-center">
+                  <div
+                    class="w-full bg-indigo-200 rounded-t-lg"
+                    style="height: 35px"
+                  ></div>
+                  <p class="text-[8px] text-gray-500 mt-1">Sun</p>
+                  <p class="text-[8px] font-semibold text-gray-600">₱380</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Orders by Status -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 mb-4">
+              <p class="text-xs font-bold text-gray-800 mb-3">
+                Orders by Status
+              </p>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between text-xs mb-1">
+                    <span class="text-gray-600">Completed</span>
+                    <span class="font-semibold text-green-600">116 (91%)</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      class="bg-green-500 h-2 rounded-full"
+                      style="width: 91%"
+                    ></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1">
+                    <span class="text-gray-600">Pending</span>
+                    <span class="font-semibold text-yellow-600">8 (6%)</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      class="bg-yellow-500 h-2 rounded-full"
+                      style="width: 6%"
+                    ></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1">
+                    <span class="text-gray-600">Cancelled</span>
+                    <span class="font-semibold text-red-600">3 (2%)</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      class="bg-red-500 h-2 rounded-full"
+                      style="width: 2%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top Customers -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 mb-4">
+              <div class="flex items-center justify-between mb-3">
+                <p class="text-xs font-bold text-gray-800">Top Customers</p>
+                <a href="#" class="text-[9px] text-indigo-500 font-medium"
+                  >View All</a
+                >
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center"
+                    >
+                      <i class="bx bx-user text-indigo-600 text-sm"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-800">
+                        Nathaniel Dagamac
+                      </p>
+                      <p class="text-[8px] text-gray-400">8 orders</p>
+                    </div>
+                  </div>
+                  <p class="text-xs font-bold text-indigo-600">₱720</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center"
+                    >
+                      <i class="bx bx-user text-green-600 text-sm"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-800">
+                        Maria Santos
+                      </p>
+                      <p class="text-[8px] text-gray-400">6 orders</p>
+                    </div>
+                  </div>
+                  <p class="text-xs font-bold text-indigo-600">₱540</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center"
+                    >
+                      <i class="bx bx-user text-amber-600 text-sm"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-800">
+                        John Dela Cruz
+                      </p>
+                      <p class="text-[8px] text-gray-400">5 orders</p>
+                    </div>
+                  </div>
+                  <p class="text-xs font-bold text-indigo-600">₱450</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Export Buttons -->
+            <div class="flex gap-3 mb-4">
+              <button
+                class="flex-1 bg-indigo-50 border border-indigo-200 text-indigo-600 py-2.5 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1"
+              >
+                <i class="bx bx-export text-sm"></i> Export CSV
+              </button>
+              <button
+                class="flex-1 bg-indigo-50 border border-indigo-200 text-indigo-600 py-2.5 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1"
+              >
+                <i class="bx bx-printer text-sm"></i> Print Report
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - GENERATE REPORT
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Generate Report
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <!-- Report Type Selection -->
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
+              <p class="text-xs font-bold text-gray-800 mb-3">Report Type</p>
+              <div class="space-y-2">
+                <label
+                  class="flex items-center gap-3 p-2 bg-white border border-gray-200 rounded-lg cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="reportType"
+                    class="w-4 h-4 text-indigo-500"
+                    checked
+                  />
+                  <div class="flex-1">
+                    <div class="text-sm font-semibold text-gray-800">
+                      Sales Report
+                    </div>
+                    <p class="text-[9px] text-gray-400">
+                      Revenue, orders, and transaction details
+                    </p>
+                  </div>
+                  <i class="bx bx-trending-up text-indigo-500 text-lg"></i>
+                </label>
+                <label
+                  class="flex items-center gap-3 p-2 bg-white border border-gray-200 rounded-lg cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="reportType"
+                    class="w-4 h-4 text-indigo-500"
+                  />
+                  <div class="flex-1">
+                    <div class="text-sm font-semibold text-gray-800">
+                      Orders Report
+                    </div>
+                    <p class="text-[9px] text-gray-400">
+                      List of all orders with status
+                    </p>
+                  </div>
+                  <i class="bx bx-cart text-indigo-500 text-lg"></i>
+                </label>
+                <label
+                  class="flex items-center gap-3 p-2 bg-white border border-gray-200 rounded-lg cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="reportType"
+                    class="w-4 h-4 text-indigo-500"
+                  />
+                  <div class="flex-1">
+                    <div class="text-sm font-semibold text-gray-800">
+                      Products Report
+                    </div>
+                    <p class="text-[9px] text-gray-400">
+                      Top selling items and inventory
+                    </p>
+                  </div>
+                  <i class="bx bx-food-menu text-indigo-500 text-lg"></i>
+                </label>
+              </div>
+            </div>
+
+            <!-- Date Range -->
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
+              <p class="text-xs font-bold text-gray-800 mb-3">Date Range</p>
+              <div class="grid grid-cols-2 gap-3 mb-3">
+                <div>
+                  <label
+                    class="block text-[9px] font-semibold text-gray-600 mb-1"
+                    >From Date</label
+                  >
+                  <input
+                    type="date"
+                    value="2026-03-01"
+                    class="w-full py-2 px-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-[9px] font-semibold text-gray-600 mb-1"
+                    >To Date</label
+                  >
+                  <input
+                    type="date"
+                    value="2026-03-13"
+                    class="w-full py-2 px-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                  />
+                </div>
+              </div>
+
+              <div class="flex gap-2 mt-2">
+                <button
+                  class="flex-1 bg-gray-100 text-gray-600 py-1.5 rounded-lg text-[10px] font-semibold"
+                >
+                  Today
+                </button>
+                <button
+                  class="flex-1 bg-gray-100 text-gray-600 py-1.5 rounded-lg text-[10px] font-semibold"
+                >
+                  This Week
+                </button>
+                <button
+                  class="flex-1 bg-gray-100 text-gray-600 py-1.5 rounded-lg text-[10px] font-semibold"
+                >
+                  This Month
+                </button>
+                <button
+                  class="flex-1 bg-gray-100 text-gray-600 py-1.5 rounded-lg text-[10px] font-semibold"
+                >
+                  This Year
+                </button>
+              </div>
+            </div>
+
+            <!-- Format Options -->
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
+              <p class="text-xs font-bold text-gray-800 mb-3">Format</p>
+              <div class="grid grid-cols-3 gap-3">
+                <label
+                  class="flex items-center gap-2 p-2 bg-white border border-gray-200 rounded-lg cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="format"
+                    class="w-4 h-4 text-indigo-500"
+                    checked
+                  />
+                  <i class="bx bx-file text-indigo-500 text-base"></i>
+                  <span class="text-xs font-medium text-gray-700">PDF</span>
+                </label>
+                <label
+                  class="flex items-center gap-2 p-2 bg-white border border-gray-200 rounded-lg cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="format"
+                    class="w-4 h-4 text-indigo-500"
+                  />
+                  <i class="bx bx-export text-indigo-500 text-base"></i>
+                  <span class="text-xs font-medium text-gray-700">CSV</span>
+                </label>
+                <label
+                  class="flex items-center gap-2 p-2 bg-white border border-gray-200 rounded-lg cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="format"
+                    class="w-4 h-4 text-indigo-500"
+                  />
+                  <i class="bx bx-printer text-indigo-500 text-base"></i>
+                  <span class="text-xs font-medium text-gray-700">Print</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Include Options -->
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
+              <p class="text-xs font-bold text-gray-800 mb-3">
+                Include in Report
+              </p>
+              <div class="space-y-2">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    class="w-4 h-4 rounded border-gray-300 text-indigo-500"
+                    checked
+                  />
+                  <span class="text-xs text-gray-700">Order Summary</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    class="w-4 h-4 rounded border-gray-300 text-indigo-500"
+                    checked
+                  />
+                  <span class="text-xs text-gray-700">Item Details</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    class="w-4 h-4 rounded border-gray-300 text-indigo-500"
+                  />
+                  <span class="text-xs text-gray-700">Payment Details</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    class="w-4 h-4 rounded border-gray-300 text-indigo-500"
+                    checked
+                  />
+                  <span class="text-xs text-gray-700">Charts & Graphs</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+              <div class="flex items-center gap-2">
+                <i class="bx bx-file-blank text-blue-500 text-base"></i>
+                <div class="flex-1">
+                  <p class="text-[10px] font-semibold text-blue-700">
+                    Report Preview
+                  </p>
+                  <p class="text-[8px] text-blue-600">
+                    Sales_Report_Mar2026.pdf (Estimated 2.3 MB)
+                  </p>
+                </div>
+                <i class="bx bx-download text-blue-500 text-base"></i>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex gap-3 mb-4">
+              <button
+                class="flex-1 bg-indigo-500 text-white py-3 rounded-lg text-sm font-semibold flex items-center justify-center gap-2"
+              >
+                <i class="bx bx-download text-base"></i> Generate Report
+              </button>
+              <button
+                class="flex-1 bg-white border border-gray-300 text-gray-600 py-3 rounded-lg text-sm font-semibold"
+              >
+                Clear
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - MENU
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center justify-between shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              My Menus
+            </div>
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-plus"></i>
+            </div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto pb-4 mobile-body">
+            <div class="px-4 pt-3 pb-2">
+              <div class="relative">
+                <i
+                  class="bx bx-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                ></i>
+                <input
+                  type="text"
+                  placeholder="Search menu items..."
+                  class="w-full py-2.5 pl-9 pr-3 bg-gray-100 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+            </div>
+
+            <div class="px-4 py-2 flex gap-2 border-b border-gray-100">
+              <div class="px-3 py-1 bg-indigo-600 rounded-full cursor-pointer">
+                <span class="text-[10px] font-medium text-white"
+                  >All Items</span
+                >
+              </div>
+              <div class="px-3 py-1 bg-gray-100 rounded-full cursor-pointer">
+                <span class="text-[10px] font-medium text-gray-600">Meals</span>
+              </div>
+              <div class="px-3 py-1 bg-gray-100 rounded-full cursor-pointer">
+                <span class="text-[10px] font-medium text-gray-600"
+                  >Drinks</span
+                >
+              </div>
+              <div class="px-3 py-1 bg-gray-100 rounded-full cursor-pointer">
+                <span class="text-[10px] font-medium text-gray-600"
+                  >Snacks</span
+                >
+              </div>
+            </div>
+
+            <div class="px-4 pt-3">
+              <div
+                class="bg-white border border-gray-200 rounded-xl p-3 mb-3 shadow-sm"
+              >
+                <div class="flex gap-3">
+                  <div
+                    class="w-16 h-16 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                  >
+                    <img
+                      src="../images/spaghetti.jpg"
+                      alt="Spaghetti"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h3 class="text-sm font-semibold text-gray-800">
+                          Spaghetti
+                        </h3>
+                        <p class="text-[10px] text-gray-400">Meals</p>
+                      </div>
+                      <div class="flex gap-1">
+                        <button class="text-gray-400 hover:text-indigo-500">
+                          <i class="bx bx-edit text-base"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-500">
+                          <i class="bx bx-trash text-base"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-2">
+                      <div>
+                        <span class="text-sm font-bold text-indigo-500"
+                          >₱25</span
+                        >
+                        <div class="flex items-center gap-2 mt-1">
+                          <span
+                            class="bg-green-100 text-green-700 text-[9px] font-semibold px-2 py-0.5 rounded-full"
+                            >Active</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white border border-gray-200 rounded-xl p-3 mb-3 shadow-sm"
+              >
+                <div class="flex gap-3">
+                  <div
+                    class="w-16 h-16 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                  >
+                    <img
+                      src="../images/fried_chicken.jpg"
+                      alt="Fried Chicken"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h3 class="text-sm font-semibold text-gray-800">
+                          Fried Chicken
+                        </h3>
+                        <p class="text-[10px] text-gray-400">Meals</p>
+                      </div>
+                      <div class="flex gap-1">
+                        <button class="text-gray-400 hover:text-indigo-500">
+                          <i class="bx bx-edit text-base"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-500">
+                          <i class="bx bx-trash text-base"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-2">
+                      <div>
+                        <span class="text-sm font-bold text-indigo-500"
+                          >₱50</span
+                        >
+                        <div class="flex items-center gap-2 mt-1">
+                          <span
+                            class="bg-green-100 text-green-700 text-[9px] font-semibold px-2 py-0.5 rounded-full"
+                            >Active</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white border border-gray-200 rounded-xl p-3 mb-3 shadow-sm"
+              >
+                <div class="flex gap-3">
+                  <div
+                    class="w-16 h-16 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                  >
+                    <img
+                      src="../images/iced_tea.jpg"
+                      alt="Iced Tea"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h3 class="text-sm font-semibold text-gray-800">
+                          Iced Tea
+                        </h3>
+                        <p class="text-[10px] text-gray-400">Drinks</p>
+                      </div>
+                      <div class="flex gap-1">
+                        <button class="text-gray-400 hover:text-indigo-500">
+                          <i class="bx bx-edit text-base"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-500">
+                          <i class="bx bx-trash text-base"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-2">
+                      <div>
+                        <span class="text-sm font-bold text-indigo-500"
+                          >₱30</span
+                        >
+                        <div class="flex items-center gap-2 mt-1">
+                          <span
+                            class="bg-green-100 text-green-700 text-[9px] font-semibold px-2 py-0.5 rounded-full"
+                            >Active</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white border border-gray-200 rounded-xl p-3 mb-3 shadow-sm"
+              >
+                <div class="flex gap-3">
+                  <div
+                    class="w-16 h-16 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                  >
+                    <img
+                      src="../images/lumpia.jpg"
+                      alt="Lumpia"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h3 class="text-sm font-semibold text-gray-800">
+                          Lumpia
+                        </h3>
+                        <p class="text-[10px] text-gray-400">Snacks</p>
+                      </div>
+                      <div class="flex gap-1">
+                        <button class="text-gray-400 hover:text-indigo-500">
+                          <i class="bx bx-edit text-base"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-500">
+                          <i class="bx bx-trash text-base"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-2">
+                      <div>
+                        <span class="text-sm font-bold text-indigo-500"
+                          >₱35</span
+                        >
+                        <div class="flex items-center gap-2 mt-1">
+                          <span
+                            class="bg-green-100 text-green-700 text-[9px] font-semibold px-2 py-0.5 rounded-full"
+                            >Active</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white border border-gray-200 rounded-xl p-3 mb-3 shadow-sm"
+              >
+                <div class="flex gap-3">
+                  <div
+                    class="w-16 h-16 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                  >
+                    <img
+                      src="../images/spaghetti_carbonara.jpg"
+                      alt="Spaghetti Carbonara"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h3 class="text-sm font-semibold text-gray-800">
+                          Spaghetti Carbonara
+                        </h3>
+                        <p class="text-[10px] text-gray-400">Meals</p>
+                      </div>
+                      <div class="flex gap-1">
+                        <button class="text-gray-400 hover:text-indigo-500">
+                          <i class="bx bx-edit text-base"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-500">
+                          <i class="bx bx-trash text-base"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-2">
+                      <div>
+                        <span class="text-sm font-bold text-indigo-500"
+                          >₱85</span
+                        >
+                        <div class="flex items-center gap-2 mt-1">
+                          <span
+                            class="bg-green-100 text-green-700 text-[9px] font-semibold px-2 py-0.5 rounded-full"
+                            >Active</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white border border-gray-200 rounded-xl p-3 mb-3 shadow-sm"
+              >
+                <div class="flex gap-3">
+                  <div
+                    class="w-16 h-16 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                  >
+                    <img
+                      src="../images/iced_tea.jpg"
+                      alt="Matcha Latte"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h3 class="text-sm font-semibold text-gray-800">
+                          Matcha Latte
+                        </h3>
+                        <p class="text-[10px] text-gray-400">Drinks</p>
+                      </div>
+                      <div class="flex gap-1">
+                        <button class="text-gray-400 hover:text-indigo-500">
+                          <i class="bx bx-edit text-base"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-500">
+                          <i class="bx bx-trash text-base"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-2">
+                      <div>
+                        <span class="text-sm font-bold text-indigo-500"
+                          >₱65</span
+                        >
+                        <div class="flex items-center gap-2 mt-1">
+                          <span
+                            class="bg-red-100 text-red-700 text-[9px] font-semibold px-2 py-0.5 rounded-full"
+                            >Inactive</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white border-t border-gray-200 flex justify-around py-2 shrink-0"
+          >
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-home-alt"></i>
+              </div>
+              <div>Dashboard</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-indigo-600 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-food-menu"></i>
+              </div>
+              <div class="font-medium">Menu</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5"><i class="bx bx-cart"></i></div>
+              <div>Orders</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-message-dots"></i>
+              </div>
+              <div>Chats</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-user-circle"></i>
+              </div>
+              <div>Profile</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - EDIT ITEM
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Edit Item
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Item Image</label
+              >
+              <div class="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-24 h-24 bg-gray-200 rounded-lg overflow-hidden mb-2"
+                  >
+                    <img
+                      src="../images/spaghetti.jpg"
+                      alt="Spaghetti"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <button
+                    class="bg-indigo-50 text-indigo-600 px-4 py-1.5 rounded-lg text-[10px] font-semibold flex items-center gap-1"
+                  >
+                    <i class="bx bx-cloud-upload text-xs"></i> Change Image
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Item Name <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                value="Spaghetti"
+                class="w-full py-2.5 px-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Category <span class="text-red-500">*</span></label
+              >
+              <select
+                class="w-full py-2.5 px-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400 bg-white"
+              >
+                <option value="meals" selected>Meals</option>
+                <option value="drinks">Drinks</option>
+                <option value="snacks">Snacks</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Price <span class="text-red-500">*</span></label
+              >
+              <div class="relative">
+                <span
+                  class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm font-semibold"
+                  >₱</span
+                >
+                <input
+                  type="number"
+                  value="25"
+                  class="w-full py-2.5 pl-7 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Status</label
+              >
+              <div class="flex gap-4">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="status"
+                    class="w-4 h-4 text-indigo-500"
+                    checked
+                  />
+                  <span class="text-xs text-gray-700">Active</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="status"
+                    class="w-4 h-4 text-indigo-500"
+                  />
+                  <span class="text-xs text-gray-700">Inactive</span>
+                </label>
+              </div>
+              <p class="text-[10px] text-gray-400 mt-1">
+                Inactive items will be hidden from customer menu
+              </p>
+            </div>
+
+            <div class="flex gap-3 mb-4">
+              <button
+                class="flex-1 bg-indigo-500 text-white py-3 rounded-lg text-sm font-semibold"
+              >
+                Save Changes
+              </button>
+              <button
+                class="flex-1 bg-white border border-gray-300 text-gray-600 py-3 rounded-lg text-sm font-semibold"
+              >
+                Cancel
+              </button>
+            </div>
+
+            <div class="border-t border-gray-200 pt-4 mt-2">
+              <p class="text-xs font-semibold text-red-600 mb-2">Danger Zone</p>
+              <button
+                class="w-full bg-red-50 border border-red-300 text-red-600 py-2.5 rounded-lg text-sm font-semibold flex items-center justify-center gap-2"
+              >
+                <i class="bx bx-trash"></i> Delete Item
+              </button>
+              <p class="text-[9px] text-gray-400 text-center mt-2">
+                This action cannot be undone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - ADD ITEM
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Add New Item
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Item Image <span class="text-red-500">*</span></label
+              >
+              <div
+                class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center cursor-pointer hover:border-indigo-400 transition"
+              >
+                <i class="bx bx-cloud-upload text-3xl text-gray-400"></i>
+                <p class="text-[10px] text-gray-500 mt-1">
+                  Tap to upload image
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Item Name <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                placeholder="e.g., Burger, Fries, Iced Coffee"
+                class="w-full py-2.5 px-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Category <span class="text-red-500">*</span></label
+              >
+              <select
+                class="w-full py-2.5 px-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400 bg-white"
+              >
+                <option value="">Select category</option>
+                <option value="meals">Meals</option>
+                <option value="drinks">Drinks</option>
+                <option value="snacks">Snacks</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Price <span class="text-red-500">*</span></label
+              >
+              <div class="relative">
+                <span
+                  class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm font-semibold"
+                  >₱</span
+                >
+                <input
+                  type="number"
+                  placeholder="0.00"
+                  class="w-full py-2.5 pl-7 pr-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5"
+                >Status</label
+              >
+              <div class="flex gap-4">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="status"
+                    class="w-4 h-4 text-indigo-500"
+                    checked
+                  />
+                  <span class="text-xs text-gray-700">Active</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="status"
+                    class="w-4 h-4 text-indigo-500"
+                  />
+                  <span class="text-xs text-gray-700">Inactive</span>
+                </label>
+              </div>
+              <p class="text-[10px] text-gray-400 mt-1">
+                Inactive items will be hidden from customer menu
+              </p>
+            </div>
+
+            <div class="mb-4">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  class="w-4 h-4 rounded border-gray-300 text-indigo-500"
+                />
+                <span class="text-xs text-gray-600"
+                  >Add another item after saving</span
+                >
+              </label>
+            </div>
+
+            <div class="flex gap-3 mb-4">
+              <button
+                class="flex-1 bg-indigo-500 text-white py-3 rounded-lg text-sm font-semibold"
+              >
+                Add Item
+              </button>
+              <button
+                class="flex-1 bg-white border border-gray-300 text-gray-600 py-3 rounded-lg text-sm font-semibold"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - ORDERS
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center justify-between shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Orders
+            </div>
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-refresh"></i>
+            </div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto pb-4 mobile-body">
+            <div class="px-4 pt-3 pb-2">
+              <div class="relative">
+                <i
+                  class="bx bx-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                ></i>
+                <input
+                  type="text"
+                  placeholder="Search orders by # or customer name..."
+                  class="w-full py-2.5 pl-9 pr-3 bg-gray-100 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-indigo-400"
+                />
+              </div>
+            </div>
+
+            <!-- 6 STATS CARDS -->
+            <div class="grid grid-cols-2 gap-2 px-4 pb-3">
+              <div
+                class="bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-xl p-2 text-white"
+              >
+                <div class="flex items-center justify-between">
+                  <p class="text-[8px] opacity-80">Total Orders</p>
+                  <i class="bx bx-receipt text-sm opacity-80"></i>
+                </div>
+                <p class="text-base font-bold mt-1">156</p>
+              </div>
+              <div
+                class="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-xl p-2 text-white"
+              >
+                <div class="flex items-center justify-between">
+                  <p class="text-[8px] opacity-80">Pending</p>
+                  <i class="bx bx-time text-sm opacity-80"></i>
+                </div>
+                <p class="text-base font-bold mt-1">8</p>
+              </div>
+              <div
+                class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-2 text-white"
+              >
+                <div class="flex items-center justify-between">
+                  <p class="text-[8px] opacity-80">Preparing</p>
+                  <i class="bx bx-cog text-sm opacity-80"></i>
+                </div>
+                <p class="text-base font-bold mt-1">12</p>
+              </div>
+              <div
+                class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-2 text-white"
+              >
+                <div class="flex items-center justify-between">
+                  <p class="text-[8px] opacity-80">Ready for Pickup</p>
+                  <i class="bx bx-store text-sm opacity-80"></i>
+                </div>
+                <p class="text-base font-bold mt-1">5</p>
+              </div>
+              <div
+                class="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-2 text-white"
+              >
+                <div class="flex items-center justify-between">
+                  <p class="text-[8px] opacity-80">Delivered</p>
+                  <i class="bx bx-check-circle text-sm opacity-80"></i>
+                </div>
+                <p class="text-base font-bold mt-1">116</p>
+              </div>
+              <div
+                class="bg-gradient-to-r from-red-500 to-red-600 rounded-xl p-2 text-white"
+              >
+                <div class="flex items-center justify-between">
+                  <p class="text-[8px] opacity-80">Cancelled</p>
+                  <i class="bx bx-x-circle text-sm opacity-80"></i>
+                </div>
+                <p class="text-base font-bold mt-1">3</p>
+              </div>
+            </div>
+
+            <div
+              class="px-4 py-2 flex gap-2 border-b border-gray-100 overflow-x-auto"
+            >
+              <div
+                class="px-3 py-1 bg-indigo-600 rounded-full cursor-pointer whitespace-nowrap"
+              >
+                <span class="text-[10px] font-medium text-white">All</span>
+              </div>
+              <div
+                class="px-3 py-1 bg-gray-100 rounded-full cursor-pointer whitespace-nowrap"
+              >
+                <span class="text-[10px] font-medium text-gray-600"
+                  >Pending</span
+                >
+              </div>
+              <div
+                class="px-3 py-1 bg-gray-100 rounded-full cursor-pointer whitespace-nowrap"
+              >
+                <span class="text-[10px] font-medium text-gray-600"
+                  >Preparing</span
+                >
+              </div>
+              <div
+                class="px-3 py-1 bg-gray-100 rounded-full cursor-pointer whitespace-nowrap"
+              >
+                <span class="text-[10px] font-medium text-gray-600">Ready</span>
+              </div>
+              <div
+                class="px-3 py-1 bg-gray-100 rounded-full cursor-pointer whitespace-nowrap"
+              >
+                <span class="text-[10px] font-medium text-gray-600"
+                  >Delivered</span
+                >
+              </div>
+              <div
+                class="px-3 py-1 bg-gray-100 rounded-full cursor-pointer whitespace-nowrap"
+              >
+                <span class="text-[10px] font-medium text-gray-600"
+                  >Cancelled</span
+                >
+              </div>
+            </div>
+
+            <div class="px-4 pt-3">
+              <div
+                class="bg-white border border-gray-200 rounded-xl mb-4 overflow-hidden shadow-sm"
+              >
+                <div
+                  class="bg-yellow-50 px-4 py-2.5 flex justify-between items-center border-b border-yellow-100"
+                >
+                  <div>
+                    <p class="text-xs font-bold text-yellow-700">#ORD-001</p>
+                    <p class="text-[11px] text-gray-500">
+                      March 13, 2026 · 11:11 AM
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="bg-yellow-100 text-yellow-700 text-[11px] font-semibold px-2 py-1 rounded-full"
+                      >Pending</span
+                    >
+                    <i
+                      class="bx bx-chevron-right text-yellow-600 text-lg cursor-pointer"
+                    ></i>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <div
+                    class="flex items-center gap-2 mb-3 pb-2 border-b border-gray-100"
+                  >
+                    <i class="bx bx-user-circle text-indigo-500 text-lg"></i>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-800">
+                        Nathaniel Dagamac
+                      </p>
+                      <p class="text-[9px] text-gray-400">
+                        CCIS 2ND FLOOR | LAB 3
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-3 mb-3">
+                    <div
+                      class="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0"
+                    >
+                      <img
+                        src="../images/iced_tea.jpg"
+                        alt="Iced Tea"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex justify-between">
+                        <h4 class="text-sm font-semibold text-gray-800">
+                          Iced Tea
+                        </h4>
+                        <p class="text-xs font-bold text-indigo-500">₱30</p>
+                      </div>
+                      <p class="text-[9px] text-gray-400">Qty: 2</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-center mt-2 pt-2 border-t border-gray-100"
+                  >
+                    <p class="text-[10px] text-gray-500">Total Amount</p>
+                    <p class="text-sm font-bold text-indigo-600">₱90</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-gray-50 px-3 py-2 border-t border-gray-100 flex gap-2"
+                >
+                  <button
+                    class="flex-1 bg-indigo-500 text-white py-1.5 rounded-lg text-[11px] font-semibold"
+                  >
+                    Accept Order
+                  </button>
+                  <button
+                    class="flex-1 bg-red-500 text-white py-1.5 rounded-lg text-[11px] font-semibold"
+                  >
+                    Decline
+                  </button>
+                </div>
+              </div>
+              <!-- PREPARING ORDER -->
+              <div
+                class="bg-white border border-gray-200 rounded-xl mb-4 overflow-hidden shadow-sm"
+              >
+                <div
+                  class="bg-amber-50 px-4 py-2.5 flex justify-between items-center border-b border-amber-100"
+                >
+                  <div>
+                    <p class="text-xs font-bold text-amber-700">#ORD-002</p>
+                    <p class="text-[11px] text-gray-500">
+                      March 13, 2026 · 10:30 AM
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="bg-amber-100 text-amber-700 text-[11px] font-semibold px-2 py-1 rounded-full"
+                      >Preparing</span
+                    >
+                    <i
+                      class="bx bx-chevron-right text-amber-600 text-lg cursor-pointer"
+                    ></i>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <div
+                    class="flex items-center gap-2 mb-3 pb-2 border-b border-gray-100"
+                  >
+                    <i class="bx bx-user-circle text-indigo-500 text-lg"></i>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-800">
+                        Nathaniel Dagamac
+                      </p>
+                      <p class="text-[9px] text-gray-400">
+                        CCIS 2ND FLOOR | LAB 3
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-3 mb-3">
+                    <div
+                      class="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0"
+                    >
+                      <img
+                        src="../images/spaghetti.jpg"
+                        alt="Spaghetti"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex justify-between">
+                        <h4 class="text-sm font-semibold text-gray-800">
+                          Spaghetti
+                        </h4>
+                        <p class="text-xs font-bold text-indigo-500">₱50</p>
+                      </div>
+                      <p class="text-[9px] text-gray-400">Qty: 2</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 mb-3">
+                    <div
+                      class="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0"
+                    >
+                      <img
+                        src="../images/fried_chicken.jpg"
+                        alt="Fried Chicken"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex justify-between">
+                        <h4 class="text-sm font-semibold text-gray-800">
+                          Fried Chicken
+                        </h4>
+                        <p class="text-xs font-bold text-indigo-500">₱50</p>
+                      </div>
+                      <p class="text-[9px] text-gray-400">Qty: 1</p>
+                    </div>
+                  </div>
+
+                  <div class="bg-gray-50 rounded-lg p-2 mb-2">
+                    <p class="text-[9px] text-gray-500 flex items-start gap-1">
+                      <i class="bx bx-note text-xs mt-0.5"></i>
+                      <span>Special request: Extra spicy on fried chicken</span>
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-center mt-2 pt-2 border-t border-gray-100"
+                  >
+                    <p class="text-[10px] text-gray-500">Total Amount</p>
+                    <p class="text-sm font-bold text-indigo-600">₱130</p>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-3 py-2 border-t border-gray-100">
+                  <button
+                    class="w-full bg-green-500 text-white py-1.5 rounded-lg text-[11px] font-semibold"
+                  >
+                    Mark as Ready
+                  </button>
+                  <p class="text-[9px] text-gray-400 text-center mt-1.5">
+                    Clicking this will change status to "Ready for Pickup"
+                  </p>
+                </div>
+              </div>
+
+              <!-- READY FOR PICKUP ORDER -->
+              <div
+                class="bg-white border border-gray-200 rounded-xl mb-4 overflow-hidden shadow-sm"
+              >
+                <div
+                  class="bg-blue-50 px-4 py-2.5 flex justify-between items-center border-b border-blue-100"
+                >
+                  <div>
+                    <p class="text-xs font-bold text-blue-700">#ORD-003</p>
+                    <p class="text-[11px] text-gray-500">
+                      March 13, 2026 · 09:45 AM
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="bg-blue-100 text-blue-700 text-[11px] font-semibold px-2 py-1 rounded-full"
+                      >Ready for Pickup</span
+                    >
+                    <i
+                      class="bx bx-chevron-right text-blue-600 text-lg cursor-pointer"
+                    ></i>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <div
+                    class="flex items-center gap-2 mb-3 pb-2 border-b border-gray-100"
+                  >
+                    <i class="bx bx-user-circle text-indigo-500 text-lg"></i>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-800">
+                        Anna Reyes
+                      </p>
+                      <p class="text-[9px] text-gray-400">
+                        CCIS 1ST FLOOR | ROOM 101
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-3 mb-3">
+                    <div
+                      class="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0"
+                    >
+                      <img
+                        src="../images/spaghetti_carbonara.jpg"
+                        alt="Spaghetti Carbonara"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex justify-between">
+                        <h4 class="text-sm font-semibold text-gray-800">
+                          Spaghetti Carbonara
+                        </h4>
+                        <p class="text-xs font-bold text-indigo-500">₱85</p>
+                      </div>
+                      <p class="text-[9px] text-gray-400">Qty: 1</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-center mt-2 pt-2 border-t border-gray-100"
+                  >
+                    <p class="text-[10px] text-gray-500">Total Amount</p>
+                    <p class="text-sm font-bold text-indigo-600">₱115</p>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-3 py-2 border-t border-gray-100">
+                  <button
+                    class="w-full bg-gray-300 text-gray-600 py-1.5 rounded-lg text-[11px] font-semibold"
+                  >
+                    Call Delivery Staff
+                  </button>
+                  <p class="text-[9px] text-gray-400 text-center mt-1.5">
+                    Waiting for delivery staff to pickup
+                  </p>
+                </div>
+              </div>
+
+              <!-- DELIVERED ORDER -->
+              <div
+                class="bg-white border border-gray-200 rounded-xl mb-4 overflow-hidden shadow-sm"
+              >
+                <div
+                  class="bg-green-50 px-4 py-2.5 flex justify-between items-center border-b border-green-100"
+                >
+                  <div>
+                    <p class="text-xs font-bold text-green-700">#ORD-004</p>
+                    <p class="text-[11px] text-gray-500">
+                      March 12, 2026 · 12:34 PM
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="bg-green-100 text-green-700 text-[11px] font-semibold px-2 py-1 rounded-full"
+                      >Delivered</span
+                    >
+                    <i
+                      class="bx bx-chevron-right text-green-600 text-lg cursor-pointer"
+                    ></i>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <div
+                    class="flex items-center gap-2 mb-3 pb-2 border-b border-gray-100"
+                  >
+                    <i class="bx bx-user-circle text-indigo-500 text-lg"></i>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-800">
+                        Maria Santos
+                      </p>
+                      <p class="text-[9px] text-gray-400">
+                        CCIS 2ND FLOOR | LAB 3
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-3 mb-3">
+                    <div
+                      class="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0"
+                    >
+                      <img
+                        src="../images/fried_chicken.jpg"
+                        alt="Fried Chicken"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex justify-between">
+                        <h4 class="text-sm font-semibold text-gray-800">
+                          Fried Chicken
+                        </h4>
+                        <p class="text-xs font-bold text-indigo-500">₱50</p>
+                      </div>
+                      <p class="text-[9px] text-gray-400">Qty: 1</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-center mt-2 pt-2 border-t border-gray-100"
+                  >
+                    <p class="text-[10px] text-gray-500">Total Amount</p>
+                    <p class="text-sm font-bold text-indigo-600">₱80</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CANCELLED ORDER -->
+              <div
+                class="bg-white border border-gray-200 rounded-xl mb-4 overflow-hidden shadow-sm opacity-70"
+              >
+                <div
+                  class="bg-red-50 px-4 py-2.5 flex justify-between items-center border-b border-red-100"
+                >
+                  <div>
+                    <p class="text-xs font-bold text-red-700">#ORD-005</p>
+                    <p class="text-[11px] text-gray-500">
+                      March 12, 2026 · 09:00 AM
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="bg-red-100 text-red-700 text-[11px] font-semibold px-2 py-1 rounded-full"
+                      >Cancelled</span
+                    >
+                    <i
+                      class="bx bx-chevron-right text-red-600 text-lg cursor-pointer"
+                    ></i>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <div
+                    class="flex items-center gap-2 mb-3 pb-2 border-b border-gray-100"
+                  >
+                    <i class="bx bx-user-circle text-indigo-500 text-lg"></i>
+                    <div>
+                      <p class="text-xs font-semibold text-gray-500">
+                        Mark Fernandez
+                      </p>
+                      <p class="text-[9px] text-gray-400">
+                        CCIS 3RD FLOOR | LAB 5
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-3 mb-3">
+                    <div
+                      class="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0"
+                    >
+                      <img
+                        src="../images/lumpia.jpg"
+                        alt="Lumpia"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex justify-between">
+                        <h4 class="text-sm font-semibold text-gray-500">
+                          Lumpia
+                        </h4>
+                        <p class="text-xs font-bold text-gray-400">₱35</p>
+                      </div>
+                      <p class="text-[9px] text-gray-400">Qty: 1</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-center mt-2 pt-2 border-t border-gray-100"
+                  >
+                    <p class="text-[10px] text-gray-500">Total Amount</p>
+                    <p class="text-sm font-bold text-gray-400">₱35</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white border-t border-gray-200 flex justify-around py-2 shrink-0"
+          >
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-home-alt"></i>
+              </div>
+              <div>Dashboard</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-food-menu"></i>
+              </div>
+              <div>Menu</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-indigo-600 transition-all"
+            >
+              <div class="text-[22px] mb-0.5"><i class="bx bx-cart"></i></div>
+              <div class="font-medium">Orders</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-message-dots"></i>
+              </div>
+              <div>Chats</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-user-circle"></i>
+              </div>
+              <div>Profile</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - ORDER DETAILS (PENDING)
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Order Details
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div
+              class="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-xl p-4 mb-4 text-white"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <p class="text-xs opacity-80">Order ID</p>
+                  <p class="text-sm font-bold">#ORD-001</p>
+                </div>
+                <div class="bg-white/20 rounded-full px-3 py-1">
+                  <span class="text-xs font-semibold">Pending</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-xs opacity-80">Placed on</p>
+                  <p class="text-sm font-semibold">March 13, 2026 · 11:11 AM</p>
+                </div>
+                <i class="bx bx-receipt text-2xl"></i>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-user-circle text-indigo-500"></i> Customer
+                Information
+              </p>
+              <div class="mb-2">
+                <p class="text-[10px] text-gray-400">Full Name</p>
+                <p class="text-xs font-semibold text-gray-800">
+                  Nathaniel Dagamac
+                </p>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-400">Contact Number</p>
+                <p class="text-xs font-semibold text-gray-800">09123456789</p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="bx bx-map-pin text-indigo-500 text-base"></i>
+                <span class="text-xs font-bold text-gray-800"
+                  >Drop Off Location</span
+                >
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-800 text-center">
+                  CCIS 2ND FLOOR | LAB 3
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-food-menu text-indigo-500"></i> Items Ordered
+              </p>
+
+              <div class="flex gap-3">
+                <div
+                  class="w-14 h-14 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="../images/iced_tea.jpg"
+                    alt="Iced Tea"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between">
+                    <div>
+                      <h4 class="text-sm font-semibold text-gray-800">
+                        Iced Tea
+                      </h4>
+                      <p class="text-[10px] text-gray-400">₱30 each · Qty: 2</p>
+                    </div>
+                    <span class="text-sm font-bold text-indigo-500">₱60</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-gray-200">
+                <div class="flex items-start gap-2">
+                  <i class="bx bx-note text-indigo-500 text-sm mt-0.5"></i>
+                  <div class="flex-1">
+                    <p class="text-[10px] font-semibold text-gray-700">
+                      Add Note
+                    </p>
+                    <p class="text-[10px] text-gray-400 italic mt-0.5">
+                      No note added
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-credit-card text-indigo-500"></i> Payment
+                Summary
+              </p>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Subtotal</span>
+                <span class="font-semibold text-gray-700">₱60</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Delivery Fee</span>
+                <span class="font-semibold text-gray-700">₱30</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Payment Method</span>
+                <span class="font-semibold text-gray-700">GCash</span>
+              </div>
+              <div
+                class="flex justify-between text-sm font-bold pt-2 border-t border-gray-200 mt-2"
+              >
+                <span>Total</span>
+                <span class="text-indigo-600">₱90</span>
+              </div>
+            </div>
+
+            <div class="flex gap-3 mb-4">
+              <button
+                class="flex-1 bg-green-500 text-white py-2.5 rounded-lg text-sm font-semibold"
+              >
+                Accept Order
+              </button>
+              <button
+                class="flex-1 bg-red-500 text-white py-2.5 rounded-lg text-sm font-semibold"
+              >
+                Decline
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - ORDER DETAILS (PREPARING)
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Order Details
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div
+              class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-4 mb-4 text-white"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <p class="text-xs opacity-80">Order ID</p>
+                  <p class="text-sm font-bold">#ORD-001</p>
+                </div>
+                <div class="bg-white/20 rounded-full px-3 py-1">
+                  <span class="text-xs font-semibold">Preparing</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-xs opacity-80">Placed on</p>
+                  <p class="text-sm font-semibold">March 13, 2026 · 11:11 AM</p>
+                </div>
+                <i class="bx bx-receipt text-2xl"></i>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-user-circle text-indigo-500"></i> Customer
+                Information
+              </p>
+              <div class="mb-2">
+                <p class="text-[10px] text-gray-400">Full Name</p>
+                <p class="text-xs font-semibold text-gray-800">
+                  Nathaniel Dagamac
+                </p>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-400">Contact Number</p>
+                <p class="text-xs font-semibold text-gray-800">09123456789</p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="bx bx-map-pin text-indigo-500 text-base"></i>
+                <span class="text-xs font-bold text-gray-800"
+                  >Drop Off Location</span
+                >
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-800 text-center">
+                  CCIS 2ND FLOOR | LAB 3
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-food-menu text-indigo-500"></i> Items Ordered
+              </p>
+
+              <div class="flex gap-3">
+                <div
+                  class="w-14 h-14 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="../images/iced_tea.jpg"
+                    alt="Iced Tea"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between">
+                    <div>
+                      <h4 class="text-sm font-semibold text-gray-800">
+                        Iced Tea
+                      </h4>
+                      <p class="text-[10px] text-gray-400">₱30 each · Qty: 2</p>
+                    </div>
+                    <span class="text-sm font-bold text-indigo-500">₱60</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-gray-200">
+                <div class="flex items-start gap-2">
+                  <i class="bx bx-note text-indigo-500 text-sm mt-0.5"></i>
+                  <div class="flex-1">
+                    <p class="text-[10px] font-semibold text-gray-700">
+                      Add Note
+                    </p>
+                    <p class="text-[10px] text-gray-400 italic mt-0.5">
+                      No note added
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-credit-card text-indigo-500"></i> Payment
+                Summary
+              </p>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Subtotal</span>
+                <span class="font-semibold text-gray-700">₱60</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Delivery Fee</span>
+                <span class="font-semibold text-gray-700">₱30</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Payment Method</span>
+                <span class="font-semibold text-gray-700">GCash</span>
+              </div>
+              <div
+                class="flex justify-between text-sm font-bold pt-2 border-t border-gray-200 mt-2"
+              >
+                <span>Total</span>
+                <span class="text-indigo-600">₱90</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3 mb-4">
+              <button
+                class="w-full bg-green-500 text-white py-2.5 rounded-lg text-sm font-semibold"
+              >
+                Mark as Ready
+              </button>
+              <button
+                class="w-full bg-red-500 text-white py-2.5 rounded-lg text-sm font-semibold"
+              >
+                Cancel Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - ORDER DETAILS (READY FOR PICKUP)
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Order Details
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div
+              class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-4 mb-4 text-white"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <p class="text-xs opacity-80">Order ID</p>
+                  <p class="text-sm font-bold">#ORD-001</p>
+                </div>
+                <div class="bg-white/20 rounded-full px-3 py-1">
+                  <span class="text-xs font-semibold">Ready for Pickup</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-xs opacity-80">Placed on</p>
+                  <p class="text-sm font-semibold">March 13, 2026 · 11:11 AM</p>
+                </div>
+                <i class="bx bx-receipt text-2xl"></i>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-user-circle text-indigo-500"></i> Customer
+                Information
+              </p>
+              <div class="mb-2">
+                <p class="text-[10px] text-gray-400">Full Name</p>
+                <p class="text-xs font-semibold text-gray-800">
+                  Nathaniel Dagamac
+                </p>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-400">Contact Number</p>
+                <p class="text-xs font-semibold text-gray-800">09123456789</p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="bx bx-map-pin text-indigo-500 text-base"></i>
+                <span class="text-xs font-bold text-gray-800"
+                  >Drop Off Location</span
+                >
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-800 text-center">
+                  CCIS 2ND FLOOR | LAB 3
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-food-menu text-indigo-500"></i> Items Ordered
+              </p>
+
+              <div class="flex gap-3">
+                <div
+                  class="w-14 h-14 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="../images/iced_tea.jpg"
+                    alt="Iced Tea"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between">
+                    <div>
+                      <h4 class="text-sm font-semibold text-gray-800">
+                        Iced Tea
+                      </h4>
+                      <p class="text-[10px] text-gray-400">₱30 each · Qty: 2</p>
+                    </div>
+                    <span class="text-sm font-bold text-indigo-500">₱60</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-gray-200">
+                <div class="flex items-start gap-2">
+                  <i class="bx bx-note text-indigo-500 text-sm mt-0.5"></i>
+                  <div class="flex-1">
+                    <p class="text-[10px] font-semibold text-gray-700">
+                      Add Note
+                    </p>
+                    <p class="text-[10px] text-gray-400 italic mt-0.5">
+                      No note added
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-credit-card text-indigo-500"></i> Payment
+                Summary
+              </p>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Subtotal</span>
+                <span class="font-semibold text-gray-700">₱60</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Delivery Fee</span>
+                <span class="font-semibold text-gray-700">₱30</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Payment Method</span>
+                <span class="font-semibold text-gray-700">GCash</span>
+              </div>
+              <div
+                class="flex justify-between text-sm font-bold pt-2 border-t border-gray-200 mt-2"
+              >
+                <span>Total</span>
+                <span class="text-indigo-600">₱90</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3 mb-4">
+              <button
+                class="w-full bg-gray-300 text-gray-600 py-2.5 rounded-lg text-sm font-semibold cursor-not-allowed"
+                disabled
+              >
+                Waiting for Pickup
+              </button>
+              <button
+                class="w-full bg-red-500 text-white py-2.5 rounded-lg text-sm font-semibold"
+              >
+                Cancel Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - ORDER DETAILS (PICKED UP)
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Order Details
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div
+              class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-4 mb-4 text-white"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <p class="text-xs opacity-80">Order ID</p>
+                  <p class="text-sm font-bold">#ORD-001</p>
+                </div>
+                <div class="bg-white/20 rounded-full px-3 py-1">
+                  <span class="text-xs font-semibold">Picked Up</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-xs opacity-80">Placed on</p>
+                  <p class="text-sm font-semibold">March 13, 2026 · 11:11 AM</p>
+                </div>
+                <i class="bx bx-receipt text-2xl"></i>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-user-circle text-indigo-500"></i> Customer
+                Information
+              </p>
+              <div class="mb-2">
+                <p class="text-[10px] text-gray-400">Full Name</p>
+                <p class="text-xs font-semibold text-gray-800">
+                  Nathaniel Dagamac
+                </p>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-400">Contact Number</p>
+                <p class="text-xs font-semibold text-gray-800">09123456789</p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="bx bx-map-pin text-indigo-500 text-base"></i>
+                <span class="text-xs font-bold text-gray-800"
+                  >Drop Off Location</span
+                >
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-800 text-center">
+                  CCIS 2ND FLOOR | LAB 3
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-food-menu text-indigo-500"></i> Items Ordered
+              </p>
+
+              <div class="flex gap-3">
+                <div
+                  class="w-14 h-14 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="../images/iced_tea.jpg"
+                    alt="Iced Tea"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between">
+                    <div>
+                      <h4 class="text-sm font-semibold text-gray-800">
+                        Iced Tea
+                      </h4>
+                      <p class="text-[10px] text-gray-400">₱30 each · Qty: 2</p>
+                    </div>
+                    <span class="text-sm font-bold text-indigo-500">₱60</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-gray-200">
+                <div class="flex items-start gap-2">
+                  <i class="bx bx-note text-indigo-500 text-sm mt-0.5"></i>
+                  <div class="flex-1">
+                    <p class="text-[10px] font-semibold text-gray-700">
+                      Add Note
+                    </p>
+                    <p class="text-[10px] text-gray-400 italic mt-0.5">
+                      No note added
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-runner text-indigo-500"></i> Delivery Staff
+              </p>
+              <div class="bg-white border border-gray-200 rounded-lg p-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center"
+                  >
+                    <i class="bx bx-runner text-indigo-600 text-xl"></i>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold text-gray-800">
+                      Jerome Villanueva
+                    </p>
+                    <p class="text-[9px] text-gray-400">Delivery Staff</p>
+                    <p class="text-[9px] text-gray-400">+63 977 6543 210</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-credit-card text-indigo-500"></i> Payment
+                Summary
+              </p>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Subtotal</span>
+                <span class="font-semibold text-gray-700">₱60</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Delivery Fee</span>
+                <span class="font-semibold text-gray-700">₱30</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Payment Method</span>
+                <span class="font-semibold text-gray-700">GCash</span>
+              </div>
+              <div
+                class="flex justify-between text-sm font-bold pt-2 border-t border-gray-200 mt-2"
+              >
+                <span>Total</span>
+                <span class="text-indigo-600">₱90</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3 mb-4">
+              <button
+                class="w-full bg-gray-300 text-gray-600 py-2.5 rounded-lg text-sm font-semibold cursor-not-allowed"
+                disabled
+              >
+                Order Picked Up
+              </button>
+              <p class="text-[9px] text-amber-600 text-center">
+                Order has been picked up by delivery staff
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - ORDER DETAILS (OUT FOR DELIVERY)
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Order Details
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div
+              class="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-4 mb-4 text-white"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <p class="text-xs opacity-80">Order ID</p>
+                  <p class="text-sm font-bold">#ORD-001</p>
+                </div>
+                <div class="bg-white/20 rounded-full px-3 py-1">
+                  <span class="text-xs font-semibold">Out for Delivery</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-xs opacity-80">Placed on</p>
+                  <p class="text-sm font-semibold">March 13, 2026 · 11:11 AM</p>
+                </div>
+                <i class="bx bx-receipt text-2xl"></i>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-user-circle text-indigo-500"></i> Customer
+                Information
+              </p>
+              <div class="mb-2">
+                <p class="text-[10px] text-gray-400">Full Name</p>
+                <p class="text-xs font-semibold text-gray-800">
+                  Nathaniel Dagamac
+                </p>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-400">Contact Number</p>
+                <p class="text-xs font-semibold text-gray-800">09123456789</p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="bx bx-map-pin text-indigo-500 text-base"></i>
+                <span class="text-xs font-bold text-gray-800"
+                  >Drop Off Location</span
+                >
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-800 text-center">
+                  CCIS 2ND FLOOR | LAB 3
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-food-menu text-indigo-500"></i> Items Ordered
+              </p>
+
+              <div class="flex gap-3">
+                <div
+                  class="w-14 h-14 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="../images/iced_tea.jpg"
+                    alt="Iced Tea"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between">
+                    <div>
+                      <h4 class="text-sm font-semibold text-gray-800">
+                        Iced Tea
+                      </h4>
+                      <p class="text-[10px] text-gray-400">₱30 each · Qty: 2</p>
+                    </div>
+                    <span class="text-sm font-bold text-indigo-500">₱60</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-gray-200">
+                <div class="flex items-start gap-2">
+                  <i class="bx bx-note text-indigo-500 text-sm mt-0.5"></i>
+                  <div class="flex-1">
+                    <p class="text-[10px] font-semibold text-gray-700">
+                      Add Note
+                    </p>
+                    <p class="text-[10px] text-gray-400 italic mt-0.5">
+                      No note added
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-runner text-indigo-500"></i> Delivery Staff
+              </p>
+              <div class="bg-white border border-gray-200 rounded-lg p-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center"
+                  >
+                    <i class="bx bx-runner text-indigo-600 text-xl"></i>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold text-gray-800">
+                      Jerome Villanueva
+                    </p>
+                    <p class="text-[9px] text-gray-400">Delivery Staff</p>
+                    <p class="text-[9px] text-gray-400">+63 977 6543 210</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-credit-card text-indigo-500"></i> Payment
+                Summary
+              </p>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Subtotal</span>
+                <span class="font-semibold text-gray-700">₱60</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Delivery Fee</span>
+                <span class="font-semibold text-gray-700">₱30</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Payment Method</span>
+                <span class="font-semibold text-gray-700">GCash</span>
+              </div>
+              <div
+                class="flex justify-between text-sm font-bold pt-2 border-t border-gray-200 mt-2"
+              >
+                <span>Total</span>
+                <span class="text-indigo-600">₱90</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3 mb-4">
+              <button
+                class="w-full bg-gray-300 text-gray-600 py-2.5 rounded-lg text-sm font-semibold cursor-not-allowed"
+                disabled
+              >
+                Out for Delivery
+              </button>
+              <p class="text-[9px] text-purple-600 text-center">
+                Order is out for delivery
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - ORDER DETAILS (DELIVERED)
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Order Details
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div
+              class="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-4 mb-4 text-white"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <p class="text-xs opacity-80">Order ID</p>
+                  <p class="text-sm font-bold">#ORD-001</p>
+                </div>
+                <div class="bg-white/20 rounded-full px-3 py-1">
+                  <span class="text-xs font-semibold">Delivered</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-xs opacity-80">Placed on</p>
+                  <p class="text-sm font-semibold">March 13, 2026 · 11:11 AM</p>
+                </div>
+                <i class="bx bx-receipt text-2xl"></i>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-user-circle text-indigo-500"></i> Customer
+                Information
+              </p>
+              <div class="mb-2">
+                <p class="text-[10px] text-gray-400">Full Name</p>
+                <p class="text-xs font-semibold text-gray-800">
+                  Nathaniel Dagamac
+                </p>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-400">Contact Number</p>
+                <p class="text-xs font-semibold text-gray-800">09123456789</p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="bx bx-map-pin text-indigo-500 text-base"></i>
+                <span class="text-xs font-bold text-gray-800"
+                  >Drop Off Location</span
+                >
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-800 text-center">
+                  CCIS 2ND FLOOR | LAB 3
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-food-menu text-indigo-500"></i> Items Ordered
+              </p>
+
+              <div class="flex gap-3">
+                <div
+                  class="w-14 h-14 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="../images/iced_tea.jpg"
+                    alt="Iced Tea"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between">
+                    <div>
+                      <h4 class="text-sm font-semibold text-gray-800">
+                        Iced Tea
+                      </h4>
+                      <p class="text-[10px] text-gray-400">₱30 each · Qty: 2</p>
+                    </div>
+                    <span class="text-sm font-bold text-indigo-500">₱60</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-gray-200">
+                <div class="flex items-start gap-2">
+                  <i class="bx bx-note text-indigo-500 text-sm mt-0.5"></i>
+                  <div class="flex-1">
+                    <p class="text-[10px] font-semibold text-gray-700">
+                      Add Note
+                    </p>
+                    <p class="text-[10px] text-gray-400 italic mt-0.5">
+                      No note added
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-runner text-indigo-500"></i> Delivery Staff
+              </p>
+              <div class="bg-white border border-gray-200 rounded-lg p-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center"
+                  >
+                    <i class="bx bx-runner text-indigo-600 text-xl"></i>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold text-gray-800">
+                      Jerome Villanueva
+                    </p>
+                    <p class="text-[9px] text-gray-400">Delivery Staff</p>
+                    <p class="text-[9px] text-gray-400">+63 977 6543 210</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-credit-card text-indigo-500"></i> Payment
+                Summary
+              </p>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Subtotal</span>
+                <span class="font-semibold text-gray-700">₱60</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Delivery Fee</span>
+                <span class="font-semibold text-gray-700">₱30</span>
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Payment Method</span>
+                <span class="font-semibold text-gray-700">GCash</span>
+              </div>
+              <div
+                class="flex justify-between text-sm font-bold pt-2 border-t border-gray-200 mt-2"
+              >
+                <span>Total</span>
+                <span class="text-indigo-600">₱90</span>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-camera text-indigo-500"></i> Proof of Delivery
+              </p>
+              <div
+                class="bg-white border border-gray-200 rounded-lg p-3 text-center"
+              >
+                <div
+                  class="w-32 h-32 bg-gray-100 rounded-lg mx-auto flex items-center justify-center overflow-hidden"
+                >
+                  <i class="bx bx-image text-4xl text-gray-400"></i>
+                </div>
+                <p class="text-[9px] text-gray-400 mt-2">
+                  Photo taken upon delivery
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3 mb-4">
+              <button
+                class="w-full bg-gray-300 text-gray-600 py-2.5 rounded-lg text-sm font-semibold cursor-not-allowed"
+                disabled
+              >
+                Order Completed
+              </button>
+              <p class="text-[9px] text-green-600 text-center">
+                ✓ This order has been successfully delivered
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - ORDER DETAILS (CANCELLED)
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              Order Details
+            </div>
+            <div class="w-6"></div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div
+              class="bg-gradient-to-r from-red-500 to-red-600 rounded-xl p-4 mb-4 text-white"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <p class="text-xs opacity-80">Order ID</p>
+                  <p class="text-sm font-bold">#ORD-001</p>
+                </div>
+                <div class="bg-white/20 rounded-full px-3 py-1">
+                  <span class="text-xs font-semibold">Cancelled</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-xs opacity-80">Placed on</p>
+                  <p class="text-sm font-semibold">March 13, 2026 · 11:11 AM</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-xs opacity-80">Cancelled on</p>
+                  <p class="text-sm font-semibold">March 13, 2026 · 11:20 AM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-red-50 border border-red-200 rounded-lg p-3 mb-4">
+              <div class="flex items-center gap-2">
+                <i class="bx bx-x-circle text-red-500 text-base"></i>
+                <div class="flex-1">
+                  <p class="text-[11px] font-semibold text-red-700">
+                    Order Cancelled
+                  </p>
+                  <p class="text-[10px] text-red-600">
+                    Reason: Customer requested cancellation
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-user-circle text-indigo-500"></i> Customer
+                Information
+              </p>
+              <div class="mb-2">
+                <p class="text-[10px] text-gray-400">Full Name</p>
+                <p class="text-xs font-semibold text-gray-800">
+                  Nathaniel Dagamac
+                </p>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-400">Contact Number</p>
+                <p class="text-xs font-semibold text-gray-800">09123456789</p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="bx bx-map-pin text-indigo-500 text-base"></i>
+                <span class="text-xs font-bold text-gray-800"
+                  >Drop Off Location</span
+                >
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-800 text-center">
+                  CCIS 2ND FLOOR | LAB 3
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-food-menu text-indigo-500"></i> Items Ordered
+              </p>
+
+              <div class="flex gap-3">
+                <div
+                  class="w-14 h-14 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="../images/iced_tea.jpg"
+                    alt="Iced Tea"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between">
+                    <div>
+                      <h4 class="text-sm font-semibold text-gray-800">
+                        Iced Tea
+                      </h4>
+                      <p class="text-[10px] text-gray-400">₱30 each · Qty: 2</p>
+                    </div>
+                    <span class="text-sm font-bold text-gray-400 line-through"
+                      >₱60</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-gray-200">
+                <div class="flex items-start gap-2">
+                  <i class="bx bx-note text-indigo-500 text-sm mt-0.5"></i>
+                  <div class="flex-1">
+                    <p class="text-[10px] font-semibold text-gray-700">
+                      Add Note
+                    </p>
+                    <p class="text-[10px] text-gray-400 italic mt-0.5">
+                      No note added
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <p
+                class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-2"
+              >
+                <i class="bx bx-credit-card text-indigo-500"></i> Payment
+                Summary
+              </p>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Subtotal</span>
+                <span class="font-semibold text-gray-400 line-through"
+                  >₱60</span
+                >
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Delivery Fee</span>
+                <span class="font-semibold text-gray-400 line-through"
+                  >₱30</span
+                >
+              </div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-500">Payment Method</span>
+                <span class="font-semibold text-gray-700">GCash</span>
+              </div>
+              <div
+                class="flex justify-between text-sm font-bold pt-2 border-t border-gray-200 mt-2"
+              >
+                <span>Refund Amount</span>
+                <span class="text-green-600">₱90</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3 mb-4">
+              <button
+                class="w-full bg-gray-300 text-gray-600 py-2.5 rounded-lg text-sm font-semibold cursor-not-allowed"
+                disabled
+              >
+                Order Cancelled
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - CHATS
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              My Chats
+            </div>
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-refresh"></i>
+            </div>
+          </div>
+
+          <div class="px-4 py-3 border-b border-gray-100 shrink-0">
+            <div class="relative">
+              <i
+                class="bx bx-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+              ></i>
+              <input
+                type="text"
+                placeholder="Search chats..."
+                class="w-full py-2 pl-9 pr-3 bg-gray-100 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-indigo-400"
+              />
+            </div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto mobile-body">
+            <div
+              class="flex items-center gap-3 px-4 py-3 border-b border-gray-100 hover:bg-gray-50 cursor-pointer"
+            >
+              <div class="relative">
+                <div
+                  class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center"
+                >
+                  <i class="bx bx-store-alt text-white text-xl"></i>
+                </div>
+                <span
+                  class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"
+                ></span>
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h3 class="text-sm font-semibold text-gray-800">
+                      Food Court Admin
+                    </h3>
+                    <p class="text-[9px] text-gray-400">Admin</p>
+                  </div>
+                  <span class="text-[10px] text-gray-400">10:30 AM</span>
+                </div>
+                <div class="flex justify-between items-center mt-0.5">
+                  <p class="text-xs text-gray-500 truncate max-w-[180px]">
+                    Your stall application has been approved!
+                  </p>
+                  <span
+                    class="bg-indigo-500 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center ml-2"
+                    >1</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-3 px-4 py-3 border-b border-gray-100 hover:bg-gray-50 cursor-pointer"
+            >
+              <div class="relative">
+                <div
+                  class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="bx bx-user text-green-600 text-xl"></i>
+                </div>
+                <span
+                  class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"
+                ></span>
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h3 class="text-sm font-semibold text-gray-800">
+                      Nathaniel Dagamac
+                    </h3>
+                    <p class="text-[9px] text-gray-400">Customer · #NW-3941</p>
+                  </div>
+                  <span class="text-[10px] text-gray-400">9:45 AM</span>
+                </div>
+                <div class="flex justify-between items-center mt-0.5">
+                  <p class="text-xs text-gray-500 truncate max-w-[180px]">
+                    Hi! Is my order ready? I'm waiting at CCIS 2nd floor.
+                  </p>
+                  <span
+                    class="bg-indigo-500 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center ml-2"
+                    >2</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-3 px-4 py-3 border-b border-gray-100 hover:bg-gray-50 cursor-pointer"
+            >
+              <div class="relative">
+                <div
+                  class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="bx bx-user text-yellow-600 text-xl"></i>
+                </div>
+                <span
+                  class="absolute bottom-0 right-0 w-3 h-3 bg-gray-300 border-2 border-white rounded-full"
+                ></span>
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h3 class="text-sm font-semibold text-gray-800">
+                      John Dela Cruz
+                    </h3>
+                    <p class="text-[9px] text-gray-400">Customer · #NW-4012</p>
+                  </div>
+                  <span class="text-[10px] text-gray-400">Yesterday</span>
+                </div>
+                <div class="flex items-center mt-0.5">
+                  <p class="text-xs text-gray-500 truncate max-w-[200px]">
+                    Can I change my order to add extra rice?
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-3 px-4 py-3 border-b border-gray-100 hover:bg-gray-50 cursor-pointer"
+            >
+              <div class="relative">
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="bx bx-user text-blue-600 text-xl"></i>
+                </div>
+                <span
+                  class="absolute bottom-0 right-0 w-3 h-3 bg-gray-300 border-2 border-white rounded-full"
+                ></span>
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h3 class="text-sm font-semibold text-gray-800">
+                      Maria Santos
+                    </h3>
+                    <p class="text-[9px] text-gray-400">Customer · #NW-3829</p>
+                  </div>
+                  <span class="text-[10px] text-gray-400">Jan 27, 2025</span>
+                </div>
+                <div class="flex items-center mt-0.5">
+                  <p class="text-xs text-gray-500 truncate max-w-[200px]">
+                    Thank you! The food was delicious! ⭐⭐⭐⭐⭐
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-3 px-4 py-3 border-b border-gray-100 hover:bg-gray-50 cursor-pointer"
+            >
+              <div class="relative">
+                <div
+                  class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="bx bx-user text-purple-600 text-xl"></i>
+                </div>
+                <span
+                  class="absolute bottom-0 right-0 w-3 h-3 bg-gray-300 border-2 border-white rounded-full"
+                ></span>
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h3 class="text-sm font-semibold text-gray-800">
+                      Anna Reyes
+                    </h3>
+                    <p class="text-[9px] text-gray-400">Customer · #NW-3950</p>
+                  </div>
+                  <span class="text-[10px] text-gray-400">Jan 26, 2025</span>
+                </div>
+                <div class="flex items-center mt-0.5">
+                  <p class="text-xs text-gray-500 truncate max-w-[200px]">
+                    Do you have vegetarian options?
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-3 px-4 py-3 border-b border-gray-100 hover:bg-gray-50 cursor-pointer"
+            >
+              <div class="relative">
+                <div
+                  class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="bx bx-runner text-amber-600 text-xl"></i>
+                </div>
+                <span
+                  class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"
+                ></span>
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h3 class="text-sm font-semibold text-gray-800">
+                      Jerome Villanueva
+                    </h3>
+                    <p class="text-[9px] text-gray-400">Delivery Staff</p>
+                  </div>
+                  <span class="text-[10px] text-gray-400">9:30 AM</span>
+                </div>
+                <div class="flex justify-between items-center mt-0.5">
+                  <p class="text-xs text-gray-500 truncate max-w-[180px]">
+                    Order #NW-3941 is ready for pickup. I'm on my way.
+                  </p>
+                  <span
+                    class="bg-indigo-500 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center ml-2"
+                    >1</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-3 px-4 py-3 border-b border-gray-100 hover:bg-gray-50 cursor-pointer"
+            >
+              <div class="relative">
+                <div
+                  class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="bx bx-headphone text-red-600 text-xl"></i>
+                </div>
+                <span
+                  class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"
+                ></span>
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h3 class="text-sm font-semibold text-gray-800">
+                      Customer Support
+                    </h3>
+                    <p class="text-[9px] text-gray-400">Support</p>
+                  </div>
+                  <span class="text-[10px] text-gray-400">Jan 25, 2025</span>
+                </div>
+                <div class="flex items-center mt-0.5">
+                  <p class="text-xs text-gray-500 truncate max-w-[200px]">
+                    Your account has been verified. Welcome to NWSSU Food Court!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white border-t border-gray-200 flex justify-around py-2 shrink-0"
+          >
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-home-alt"></i>
+              </div>
+              <div>Dashboard</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-food-menu"></i>
+              </div>
+              <div>Menu</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5"><i class="bx bx-cart"></i></div>
+              <div>Orders</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-indigo-600 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-message-dots"></i>
+              </div>
+              <div class="font-medium">Chats</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-user-circle"></i>
+              </div>
+              <div>Profile</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - CHAT VIEW
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-2 px-4 flex items-center shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="flex-1 flex items-center gap-3 mx-3">
+              <div
+                class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center"
+              >
+                <i class="bx bx-user text-green-600 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-gray-800">
+                  Nathaniel Dagamac
+                </h3>
+                <p class="text-[9px] text-gray-400">Customer · #NW-3941</p>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <div class="text-2xl text-gray-800 cursor-pointer">
+                <i class="bx bx-phone-call"></i>
+              </div>
+              <div class="text-2xl text-gray-800 cursor-pointer">
+                <i class="bx bx-info-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-indigo-50 px-4 py-2 border-b border-indigo-100 shrink-0"
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-[9px] text-indigo-600 font-semibold">
+                  Order #NW-3941
+                </p>
+                <p class="text-[10px] text-indigo-800 font-medium">
+                  Status: Preparing
+                </p>
+              </div>
+              <button
+                class="bg-indigo-500 text-white px-3 py-1 rounded-lg text-[9px] font-semibold"
+              >
+                View Order
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div class="text-center mb-4">
+              <span
+                class="text-[9px] text-gray-400 bg-gray-100 px-2 py-1 rounded-full"
+                >Today 9:45 AM</span
+              >
+            </div>
+
+            <div class="flex mb-3">
+              <div
+                class="max-w-[80%] bg-gray-100 rounded-2xl rounded-tl-none px-3 py-2"
+              >
+                <p class="text-xs text-gray-700">
+                  Good morning! Just checking if my order is ready?
+                </p>
+                <span class="text-[9px] text-gray-400 mt-1 block">9:45 AM</span>
+              </div>
+            </div>
+
+            <div class="flex justify-end mb-3">
+              <div
+                class="max-w-[80%] bg-indigo-500 rounded-2xl rounded-tr-none px-3 py-2"
+              >
+                <p class="text-xs text-white">
+                  Good morning! Your order is being prepared. We'll update you
+                  once it's ready.
+                </p>
+                <span class="text-[9px] text-indigo-200 mt-1 block text-right"
+                  >9:47 AM</span
+                >
+              </div>
+            </div>
+
+            <div class="flex mb-3">
+              <div
+                class="max-w-[80%] bg-gray-100 rounded-2xl rounded-tl-none px-3 py-2"
+              >
+                <p class="text-xs text-gray-700">
+                  Okay noted! How long will it take? I'm at CCIS 2nd floor, Lab
+                  3.
+                </p>
+                <span class="text-[9px] text-gray-400 mt-1 block">9:50 AM</span>
+              </div>
+            </div>
+
+            <div class="flex justify-end mb-3">
+              <div
+                class="max-w-[80%] bg-indigo-500 rounded-2xl rounded-tr-none px-3 py-2"
+              >
+                <p class="text-xs text-white">
+                  About 10-15 minutes. We'll have it delivered to your location.
+                </p>
+                <span class="text-[9px] text-indigo-200 mt-1 block text-right"
+                  >9:52 AM</span
+                >
+              </div>
+            </div>
+
+            <div class="flex mb-3">
+              <div
+                class="max-w-[80%] bg-gray-100 rounded-2xl rounded-tl-none px-3 py-2"
+              >
+                <p class="text-xs text-gray-700">
+                  Perfect! Also, can you add extra sauce on the fried chicken?
+                </p>
+                <span class="text-[9px] text-gray-400 mt-1 block">9:54 AM</span>
+              </div>
+            </div>
+
+            <div class="flex justify-end mb-3">
+              <div
+                class="max-w-[80%] bg-indigo-500 rounded-2xl rounded-tr-none px-3 py-2"
+              >
+                <p class="text-xs text-white">
+                  Sure! I'll note that for the kitchen. Extra sauce on fried
+                  chicken.
+                </p>
+                <span class="text-[9px] text-indigo-200 mt-1 block text-right"
+                  >9:55 AM</span
+                >
+              </div>
+            </div>
+
+            <div class="flex mb-3">
+              <div
+                class="max-w-[80%] bg-gray-100 rounded-2xl rounded-tl-none px-3 py-2"
+              >
+                <p class="text-xs text-gray-700">Thank you so much! 😊</p>
+                <span class="text-[9px] text-gray-400 mt-1 block">9:56 AM</span>
+              </div>
+            </div>
+
+            <div class="flex justify-end mb-3">
+              <div
+                class="max-w-[80%] bg-indigo-500 rounded-2xl rounded-tr-none px-3 py-2"
+              >
+                <p class="text-xs text-white">
+                  You're welcome! We'll update you once the delivery is on its
+                  way.
+                </p>
+                <span class="text-[9px] text-indigo-200 mt-1 block text-right"
+                  >9:58 AM</span
+                >
+              </div>
+            </div>
+
+            <div class="flex justify-center mb-3">
+              <div class="bg-gray-100 rounded-full px-3 py-1">
+                <p class="text-[8px] text-gray-500">
+                  🟢 Order status updated to "Preparing"
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 px-3 py-2 border-t border-gray-100 shrink-0">
+            <div class="flex gap-2 mb-2 overflow-x-auto">
+              <button
+                class="bg-white border border-gray-200 rounded-full px-3 py-1 text-[10px] text-gray-600 whitespace-nowrap"
+              >
+                Order is ready
+              </button>
+              <button
+                class="bg-white border border-gray-200 rounded-full px-3 py-1 text-[10px] text-gray-600 whitespace-nowrap"
+              >
+                On its way
+              </button>
+              <button
+                class="bg-white border border-gray-200 rounded-full px-3 py-1 text-[10px] text-gray-600 whitespace-nowrap"
+              >
+                Sorry for the delay
+              </button>
+              <button
+                class="bg-white border border-gray-200 rounded-full px-3 py-1 text-[10px] text-gray-600 whitespace-nowrap"
+              >
+                Thank you!
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-white border-t border-gray-200 p-3 flex items-center gap-2 shrink-0"
+          >
+            <button class="text-gray-400 text-xl">
+              <i class="bx bx-smile"></i>
+            </button>
+            <button class="text-gray-400 text-xl">
+              <i class="bx bx-paperclip"></i>
+            </button>
+            <input
+              type="text"
+              placeholder="Type a message..."
+              class="flex-1 py-2 px-3 bg-gray-100 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-indigo-400"
+            />
+            <button
+              class="bg-indigo-500 text-white w-8 h-8 rounded-full flex items-center justify-center"
+            >
+              <i class="bx bx-send text-sm"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        class="text-center mb-2 text-[13px] font-bold text-gray-800 tracking-wide uppercase"
+      >
+        📱 STALL - PROFILE
+      </div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div
+            class="bg-white border-b border-gray-200 py-3 px-4 flex items-center justify-between shrink-0"
+          >
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="text-base font-semibold text-black flex-1 text-center">
+              My Profile
+            </div>
+            <div class="text-2xl text-gray-800 cursor-pointer">
+              <i class="bx bx-edit"></i>
+            </div>
+          </div>
+          <div class="flex-1 overflow-y-auto p-4 mobile-body">
+            <div class="text-center mb-5 pb-4 border-b border-gray-200">
+              <div
+                class="w-20 h-20 rounded-full mx-auto mb-3 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="../images/stall_owner_profile.jpg"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                  onerror="
+                    this.src = 'https://placehold.co/80x80/indigo/white?text=SO'
+                  "
+                />
+              </div>
+              <div class="text-base font-semibold text-black mb-1">
+                Juan Dela Cruz
+              </div>
+              <div class="text-xs text-gray-400 mb-0.5">Stall 1</div>
+            </div>
+
+            <!-- Owner Information Group -->
+            <div
+              class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-3"
+            >
+              <div class="px-3.5 py-2 bg-gray-100 border-b border-gray-200">
+                <p class="text-[11px] font-semibold text-gray-500">
+                  OWNER INFORMATION
+                </p>
+              </div>
+
+              <div class="py-3 px-3.5 border-b border-gray-200">
+                <p class="text-[10px] text-gray-400 mb-0.5">Full Name</p>
+                <p class="text-[13px] font-medium text-gray-800">
+                  Juan Dela Cruz
+                </p>
+              </div>
+
+              <div class="py-3 px-3.5 border-b border-gray-200">
+                <p class="text-[10px] text-gray-400 mb-0.5">Contact Number</p>
+                <p class="text-[13px] font-medium text-gray-800">09123456789</p>
+              </div>
+
+              <div class="py-3 px-3.5">
+                <p class="text-[10px] text-gray-400 mb-0.5">Email Address</p>
+                <p class="text-[13px] font-medium text-gray-800">
+                  juan.delacruz@nwssu.edu.ph
+                </p>
+              </div>
+            </div>
+
+            <!-- Account Settings Group -->
+            <div
+              class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-3"
+            >
+              <div class="px-3.5 py-2 bg-gray-100 border-b border-gray-200">
+                <p class="text-[11px] font-semibold text-gray-500">
+                  ACCOUNT SETTINGS
+                </p>
+              </div>
+
+              <div
+                class="flex items-center justify-between py-3 px-3.5 border-b border-gray-200"
+              >
+                <div class="flex items-center gap-2.5">
+                  <i class="bx bx-circle text-indigo-500 text-xl"></i>
+                  <span class="text-[13px] font-medium">Status</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="bg-green-100 text-green-700 text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                    >Active</span
+                  >
+                  <i class="bx bx-chevron-right text-gray-300 text-xl"></i>
+                </div>
+              </div>
+
+              <a
+                href="#"
+                class="flex items-center justify-between py-3 px-3.5 border-b border-gray-200"
+              >
+                <div class="flex items-center gap-2.5">
+                  <i class="bx bx-lock text-indigo-500 text-xl"></i>
+                  <span class="text-[13px] font-medium">Change Password</span>
+                </div>
+                <i class="bx bx-chevron-right text-gray-300 text-xl"></i>
+              </a>
+
+              <a
+                href="#"
+                class="flex items-center justify-between py-3 px-3.5 border-b border-gray-200"
+              >
+                <div class="flex items-center gap-2.5">
+                  <i class="bx bx-phone text-indigo-500 text-xl"></i>
+                  <span class="text-[13px] font-medium"
+                    >Change Contact Number</span
+                  >
+                </div>
+                <i class="bx bx-chevron-right text-gray-300 text-xl"></i>
+              </a>
+
+              <a href="#" class="flex items-center justify-between py-3 px-3.5">
+                <div class="flex items-center gap-2.5">
+                  <i class="bx bx-envelope text-indigo-500 text-xl"></i>
+                  <span class="text-[13px] font-medium"
+                    >Change Email Address</span
+                  >
+                </div>
+                <i class="bx bx-chevron-right text-gray-300 text-xl"></i>
+              </a>
+            </div>
+
+            <!-- Preferences Group -->
+            <div
+              class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-3"
+            >
+              <div class="px-3.5 py-2 bg-gray-100 border-b border-gray-200">
+                <p class="text-[11px] font-semibold text-gray-500">
+                  PREFERENCES
+                </p>
+              </div>
+
+              <a href="#" class="flex items-center justify-between py-3 px-3.5">
+                <div class="flex items-center gap-2.5">
+                  <i class="bx bx-bell text-indigo-500 text-xl"></i>
+                  <span class="text-[13px] font-medium">Notifications</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] text-gray-400">On</span>
+                  <i class="bx bx-chevron-right text-gray-300 text-xl"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Logout Group -->
+            <div
+              class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden"
+            >
+              <div class="px-3.5 py-2 bg-gray-100 border-b border-gray-200">
+                <p class="text-[11px] font-semibold text-gray-500">LOGOUT</p>
+              </div>
+
+              <a
+                href="#"
+                class="flex items-center justify-between py-3 px-3.5 text-red-700"
+              >
+                <div class="flex items-center gap-2.5">
+                  <i class="bx bx-log-out text-red-600 text-xl"></i>
+                  <span class="text-[13px] font-medium">Sign Out</span>
+                </div>
+                <i class="bx bx-chevron-right text-gray-300 text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white border-t border-gray-200 flex justify-around py-2 shrink-0"
+          >
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-home-alt"></i>
+              </div>
+              <div>Dashboard</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-food-menu"></i>
+              </div>
+              <div>Menu</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5"><i class="bx bx-cart"></i></div>
+              <div>Orders</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-gray-400 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-message-dots"></i>
+              </div>
+              <div>Chats</div>
+            </div>
+            <div
+              class="flex-1 text-center py-2 cursor-pointer text-[10px] text-indigo-600 transition-all"
+            >
+              <div class="text-[22px] mb-0.5">
+                <i class="bx bx-user-circle"></i>
+              </div>
+              <div class="font-medium">Profile</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
